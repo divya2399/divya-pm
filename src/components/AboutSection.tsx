@@ -1,0 +1,114 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Users, Target, Lightbulb, TrendingUp } from "lucide-react";
+
+const AboutSection = () => {
+  const highlights = [
+    {
+      icon: Users,
+      title: "Team Leadership",
+      description: "Led cross-functional teams of 15+ members across engineering, design, and data science.",
+    },
+    {
+      icon: Target,
+      title: "Strategic Planning",
+      description: "Developed product roadmaps that increased user engagement by 40% and revenue by 25%.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "Launched 3 breakthrough features that became core pillars of the product ecosystem.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Growth Focus",
+      description: "Consistently delivered products that exceeded KPI targets and user satisfaction metrics.",
+    },
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-surface">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4 border-primary/30 text-primary">
+              About Me
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Building Products That Matter
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              With over 7 years of experience in product management and technical strategy, 
+              I specialize in bridging the gap between complex technology and user needs.
+            </p>
+          </div>
+
+          {/* Bio Content */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <p className="text-foreground leading-relaxed">
+                I'm passionate about creating technology solutions that solve real-world problems. 
+                My journey began in software engineering, where I developed a deep appreciation for 
+                technical excellence and user-centered design.
+              </p>
+              <p className="text-foreground leading-relaxed">
+                Transitioning into product management allowed me to combine my technical background 
+                with strategic thinking, leading to successful launches of enterprise SaaS platforms 
+                and consumer applications that serve millions of users globally.
+              </p>
+              <p className="text-foreground leading-relaxed">
+                I believe in data-driven decision making, agile methodologies, and fostering 
+                collaborative environments where innovation thrives. My approach focuses on 
+                understanding user pain points and translating them into scalable technical solutions.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {highlights.map((highlight, index) => (
+                <Card key={index} className="border-border/50 bg-surface-elevated hover:shadow-elegant transition-all duration-300">
+                  <CardContent className="p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/10 rounded-lg">
+                        <highlight.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">
+                          {highlight.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {highlight.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { number: "7+", label: "Years Experience" },
+              { number: "15+", label: "Products Launched" },
+              { number: "50M+", label: "Users Impacted" },
+              { number: "3", label: "Successful Exits" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
