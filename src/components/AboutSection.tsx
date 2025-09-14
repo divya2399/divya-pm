@@ -69,13 +69,13 @@ const AboutSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[{
-            number: "7+",
+            number: "4",
             label: "Years Experience"
           }, {
-            number: "15+",
-            label: "Products Launched"
+            number: "20+",
+            label: "Features Launched"
           }, {
-            number: "50M+",
+            number: "",
             label: "Users Impacted"
           }, {
             number: "3",
