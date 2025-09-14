@@ -8,7 +8,7 @@ const AboutSection = () => {
     description: "Led cross-functional teams of 15+ members across engineering, design, and data science."
   }, {
     icon: Target,
-    title: "Strategic Planning",
+    title: "User Research",
     description: "Developed product roadmaps that increased user engagement by 40% and revenue by 25%."
   }, {
     icon: Lightbulb,
