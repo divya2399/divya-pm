@@ -17,7 +17,7 @@ const AboutSection = () => {
   }, {
     icon: TrendingUp,
     title: "Agile Delivery",
-    description: "Consistently delivered products that exceeded KPI targets and user satisfaction metrics."
+    description: "Owned the full lifecycle of a user-facing analytics tool, from identifying stakeholder needs to delivering solutions"
   }];
   return <section id="about" className="py-20 bg-surface">
       <div className="container mx-auto px-6">
