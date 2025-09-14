@@ -16,7 +16,7 @@ const AboutSection = () => {
     description: "Launched 3 breakthrough features that became core pillars of the product ecosystem."
   }, {
     icon: TrendingUp,
-    title: "Growth Focus",
+    title: "Agile Delivery",
     description: "Consistently delivered products that exceeded KPI targets and user satisfaction metrics."
   }];
   return <section id="about" className="py-20 bg-surface">
