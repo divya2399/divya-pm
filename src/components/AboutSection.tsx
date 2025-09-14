@@ -5,7 +5,7 @@ const AboutSection = () => {
   const highlights = [{
     icon: Users,
     title: "Product Strategy",
-    description: "Owned the full lifecycle of analytics tool, from identifying stakeholder needs to delivering solutions"
+    description: "Owned the lifecycle of internal tools, from identifying user needs to delivering solutions, streamlining decision-making"
   }, {
     icon: Target,
     title: "User Research",
@@ -17,7 +17,7 @@ const AboutSection = () => {
   }, {
     icon: TrendingUp,
     title: "Agile Delivery",
-    description: "Owned the full lifecycle of a user-facing analytics tool, from identifying stakeholder needs to delivering solutions"
+    description: "Managed Agile development cycles for multiple feature upgrades, using user feedback to boost adoption and efficiency"
   }];
   return <section id="about" className="py-20 bg-surface">
       <div className="container mx-auto px-6">
