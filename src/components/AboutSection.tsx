@@ -9,7 +9,7 @@ const AboutSection = () => {
   }, {
     icon: Target,
     title: "User Research",
-    description: "Led end-to-end discovery using stakeholder interviews, empathy mapping, and journey analysis to validate pain points and drive impactful product recommendations"
+    description: "Led product discovery using stakeholder interviews, user journey mapping to validate pain points and drive impactful product recommendations"
   }, {
     icon: Lightbulb,
     title: "Cross-Functional Leadership",
