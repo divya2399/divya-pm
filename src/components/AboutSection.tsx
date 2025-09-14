@@ -4,7 +4,7 @@ import { Users, Target, Lightbulb, TrendingUp } from "lucide-react";
 const AboutSection = () => {
   const highlights = [{
     icon: Users,
-    title: "Team Leadership",
+    title: "Product Strategy",
     description: "Led cross-functional teams of 15+ members across engineering, design, and data science."
   }, {
     icon: Target,
