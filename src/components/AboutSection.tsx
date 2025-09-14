@@ -13,7 +13,7 @@ const AboutSection = () => {
   }, {
     icon: Lightbulb,
     title: "Cross-Functional Leadership",
-    description: "Launched 3 breakthrough features that became core pillars of the product ecosystem."
+    description: "Collaborated with diverse teams to deliver workflow enhancements that boosted team efficiency and aligned stakeholders around common goals"
   }, {
     icon: TrendingUp,
     title: "Agile Delivery",
