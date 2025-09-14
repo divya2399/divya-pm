@@ -72,14 +72,14 @@ const AboutSection = () => {
             number: "4",
             label: "Years Experience"
           }, {
+            number: "2",
+            label: "Degrees"
+          }, {
             number: "20+",
             label: "Features Launched"
           }, {
-            number: "",
-            label: "Users Impacted"
-          }, {
-            number: "3",
-            label: "Successful Exits"
+            number: "3+",
+            label: "Organizations Served"
           }].map((stat, index) => <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                   {stat.number}
