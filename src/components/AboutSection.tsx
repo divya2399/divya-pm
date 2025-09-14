@@ -13,7 +13,7 @@ const AboutSection = () => {
   }, {
     icon: Lightbulb,
     title: "Cross-Functional Leadership",
-    description: "Collaborated with diverse teams to deliver workflow enhancements that boosted team efficiency and aligned stakeholders around common goals"
+    description: "Coordinated with diverse partners to deliver workflow solutions that improved team efficiency and stakeholder alignment"
   }, {
     icon: TrendingUp,
     title: "Agile Delivery",
