@@ -12,7 +12,7 @@ const AboutSection = () => {
     description: "Developed product roadmaps that increased user engagement by 40% and revenue by 25%."
   }, {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Cross-Functional Leadership",
     description: "Launched 3 breakthrough features that became core pillars of the product ecosystem."
   }, {
     icon: TrendingUp,
