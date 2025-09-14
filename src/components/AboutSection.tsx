@@ -5,7 +5,7 @@ const AboutSection = () => {
   const highlights = [{
     icon: Users,
     title: "Product Strategy",
-    description: "Led cross-functional teams of 15+ members across engineering, design, and data science."
+    description: "Owned the full lifecycle of analytics tool, from identifying stakeholder needs to delivering solutions"
   }, {
     icon: Target,
     title: "User Research",
