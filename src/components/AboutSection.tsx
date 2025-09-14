@@ -9,7 +9,7 @@ const AboutSection = () => {
   }, {
     icon: Target,
     title: "User Research",
-    description: "Developed product roadmaps that increased user engagement by 40% and revenue by 25%."
+    description: "Led end-to-end discovery using stakeholder interviews, empathy mapping, and journey analysis to validate pain points and drive impactful product recommendations"
   }, {
     icon: Lightbulb,
     title: "Cross-Functional Leadership",
