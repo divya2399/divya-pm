@@ -36,8 +36,9 @@ const SkillsSection = () => {
       title: "Product Management",
       color: "text-primary-glow",
       skills: [
-        "Agile/Scrum", "Roadmapping", "User Stories", "Wireframing", 
-        "Stakeholder Management", "Go-to-Market", "Feature Prioritization"
+        "Roadmapping", "User Stories", "Wireframing", "Stakeholder Management", 
+        "Go-to-Market", "Feature Prioritization", "Objectives & Key Results", 
+        "User Acceptance Testing", "SAFe"
       ]
     },
     {
