@@ -50,10 +50,7 @@ const SkillsSection = () => {
     }
   ];
 
-  const tools = [
-    "Jira", "Confluence", "Slack", "Notion", "Figma", "Miro", 
-    "Postman", "GitHub", "Linear", "Amplitude", "Intercom", "Zendesk"
-  ];
+
 
   return (
     <section id="skills" className="py-20 bg-background">
