@@ -37,7 +37,7 @@ const SkillsSection = () => {
       color: "text-primary-glow",
       skills: [
         "Roadmapping", "User Stories", "Wireframing", "Stakeholder Management", 
-        "Go-to-Market", "Feature Prioritization", "Objectives & Key Results", 
+        "Go-to-Market", "Feature Prioritization", "OKRs", 
         "User Acceptance Testing", "SAFe"
       ]
     },
