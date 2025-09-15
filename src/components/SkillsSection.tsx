@@ -27,7 +27,7 @@ const SkillsSection = () => {
       title: "Platforms & Tools",
       color: "text-accent",
       skills: [
-        "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot"
+        "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot", "Notion", "Github", "Lovable"
       ]
     },
     {
