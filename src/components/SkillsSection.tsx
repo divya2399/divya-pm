@@ -24,11 +24,10 @@ const SkillsSection = () => {
     },
     {
       icon: BarChart3,
-      title: "Analytics & Data",
+      title: "Platforms & Tools
       color: "text-accent",
       skills: [
-        "Google Analytics", "Mixpanel", "Tableau", "A/B Testing", 
-        "User Research", "Data Modeling", "KPI Design", "SQL Analytics"
+        "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot"
       ]
     },
     {
@@ -46,7 +45,7 @@ const SkillsSection = () => {
       color: "text-accent",
       skills: [
         "Figma", "User Journey Mapping", "Prototyping", "Design Systems", 
-        "Usability Testing", "Information Architecture", "Accessibility"
+        "Usability Testing"
       ]
     }
   ];
