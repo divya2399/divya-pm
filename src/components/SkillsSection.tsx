@@ -18,8 +18,8 @@ const SkillsSection = () => {
       title: "Technical Skills",
       color: "text-primary",
       skills: [
-        "Python", "JavaScript", "SQL", "React", "Node.js", 
-        "AWS", "Docker", "APIs", "Microservices", "Git"
+        "Java", "Python", "SQL", "Linux", "R", 
+        "Git", "Docker", "Kubernetes", "AWS"
       ]
     },
     {
