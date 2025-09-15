@@ -24,7 +24,7 @@ const SkillsSection = () => {
     },
     {
       icon: BarChart3,
-      title: "Platforms & Tools
+      title: "Platforms & Tools",
       color: "text-accent",
       skills: [
         "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot"
