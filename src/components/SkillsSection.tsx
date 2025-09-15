@@ -50,6 +50,11 @@ const SkillsSection = () => {
     }
   ];
 
+  const tools = [
+    "Java", "Python", "SQL", "Linux", "R", "Git", "Docker", "Kubernetes", "AWS",
+    "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot", 
+    "Notion", "Github", "Lovable", "Figma"
+  ];
 
 
   return (
