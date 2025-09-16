@@ -21,16 +21,8 @@ const ExperienceSection = () => {
     role: "System Reliablity Engineer",
     period: "January 2021 - October 2023",
     type: "Full-time",
-    achievements: ["Launched analytics dashboard used by 100+ enterprise clients", "Reduced customer onboarding time from 30 days to 7 days", "Created product documentation and training materials for sales team", "Coordinated with UX team to improve user interface satisfaction by 50%"],
-    skills: ["Enterprise Software", "Analytics", "Documentation", "UX Collaboration"]
-  }, {
-    company: "StartupX",
-    role: "Software Engineer",
-    period: "2017 - 2018",
-    location: "Remote",
-    type: "Full-time",
-    achievements: ["Developed full-stack web applications using React and Node.js", "Built REST APIs serving millions of requests per day", "Optimized database queries reducing response time by 60%", "Mentored 2 junior developers in modern web development practices"],
-    skills: ["Full-stack Development", "React", "Node.js", "Database Optimization"]
+    achievements: ["Increased Prism Central adoption by 22% in six months through new features", "Identified and resolved 600+ customer issues, improving customer retention by 5%", "Collaborated with product team on 20+ critical bugs, reducing incidents by 16% and boosting reliability"],
+    skills: ["B2C SaaS", "Prioritization", "Documentation", "CRM"]
   }];
   return <section id="experience" className="py-20 bg-surface">
       <div className="container mx-auto px-6">
