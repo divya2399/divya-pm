@@ -131,8 +131,8 @@ const SkillsSection = () => {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: Cpu, label: "Technical", level: "Expert" },
-              { icon: BarChart3, label: "Analytics", level: "Advanced" },
-              { icon: Users, label: "Leadership", level: "Expert" },
+              { icon: BarChart3, label: "Product", level: "Advanced" },
+              { icon: Users, label: "Design", level: "Intermediate" },
               { icon: Globe, label: "Strategy", level: "Advanced" }
             ].map((item, index) => (
               <div key={index} className="text-center group">
