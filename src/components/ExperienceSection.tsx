@@ -16,7 +16,7 @@ const ExperienceSection = () => {
         "Delivered 20+ upgrades, cut user effort by 37%, sped results by 12%.",
         "Streamlined onboarding for 10+ tools, reduced time 33%, increased adoption 18%."
       ],
-      skills: ["Product Strategy", "Team Leadership", "B2B SaaS", "Data Analytics"]
+      skills: ["Product Strategy", "Roadmapping", "Product Lifecycle", "Data Analytics"]
     },
     {
       company: "InnovateLabs",
