@@ -3,37 +3,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CalendarDays, MapPin, TrendingUp, Users, Award } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [{
-    company: "TechFlow Solutions",
-    role: "Senior Product Manager",
-    period: "2022 - Present",
-    location: "San Francisco, CA",
-    type: "Full-time",
-    achievements: ["Led product strategy for B2B SaaS platform serving 500K+ users", "Increased user engagement by 45% through data-driven feature optimization", "Managed $2M product budget and cross-functional team of 12 members", "Launched 3 major product lines resulting in 30% revenue growth"],
-    skills: ["Product Strategy", "Team Leadership", "B2B SaaS", "Data Analytics"]
+    company: "Regeneron Pharmaceuticals",
+    role: "Data Product Manager Co-op",
+    period: "June 2025 - Present",
+    type: "Internship",
+    achievements: ["Launched real-time dashboard, reducing manual effort from 16+ hours to zero", "Drove OKR adoption across 7 teams, improving analytics delivery and alignment", "Delivered 20+ upgrades, cut user effort by 37%, sped results by 12%", "Streamlined onboarding for 10+ tools, reduced time 33%, increased adoption 18%"],
+    skills: ["Product Strategy", "Roadmapping", "Product Lifecycle", "Change Management"]
   }, {
-    company: "InnovateLabs",
-    role: "Product Manager",
-    period: "2020 - 2022",
-    location: "Austin, TX",
+    company: "Eli Lilly Pvt Ltd",
+    role: "Technical Product Analyst",
+    period: "October 2023 - June 2024",
     type: "Full-time",
-    achievements: ["Spearheaded mobile app redesign that improved user retention by 35%", "Collaborated with engineering teams to reduce feature delivery time by 40%", "Conducted user research with 200+ participants to inform product decisions", "Implemented agile methodologies across 3 product teams"],
-    skills: ["Mobile Apps", "User Research", "Agile", "Cross-functional Leadership"]
+    achievements: ["Deployed BioTuring on AWS, improving research workflow efficiency by 30%", "Automated ML workflows with Kubeflow on AWS, reduced deployment time by 60%", "Standardized dev environments with Coder on AWS, boosted adoption by 40%"],
+    skills: ["Amazon Web Services", "User Engagement", "Agile", "Cross-functional Collaboration"]
   }, {
-    company: "DataVision Corp",
-    role: "Associate Product Manager",
-    period: "2018 - 2020",
-    location: "New York, NY",
+    company: "Nutanix",
+    role: "System Reliablity Engineer",
+    period: "January 2021 - October 2023",
     type: "Full-time",
-    achievements: ["Launched analytics dashboard used by 100+ enterprise clients", "Reduced customer onboarding time from 30 days to 7 days", "Created product documentation and training materials for sales team", "Coordinated with UX team to improve user interface satisfaction by 50%"],
-    skills: ["Enterprise Software", "Analytics", "Documentation", "UX Collaboration"]
-  }, {
-    company: "StartupX",
-    role: "Software Engineer",
-    period: "2017 - 2018",
-    location: "Remote",
-    type: "Full-time",
-    achievements: ["Developed full-stack web applications using React and Node.js", "Built REST APIs serving millions of requests per day", "Optimized database queries reducing response time by 60%", "Mentored 2 junior developers in modern web development practices"],
-    skills: ["Full-stack Development", "React", "Node.js", "Database Optimization"]
+    achievements: ["Increased Prism Central adoption by 22% in six months through new features", "Identified and resolved 600+ customer issues, improving customer retention by 5%", "Collaborated with product team on 20+ critical bugs, reducing incidents by 16% and boosting reliability"],
+    skills: ["B2C SaaS", "Prioritization", "Documentation", "Customer Relationship Management"]
   }];
   return <section id="experience" className="py-20 bg-surface">
       <div className="container mx-auto px-6">
@@ -66,7 +55,10 @@ const ExperienceSection = () => {
                       </h4>
                       
                       <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                        
+                        <div className="flex items-center gap-1">
+                          <CalendarDays className="h-4 w-4" />
+                          {exp.period}
+                        </div>
                         
                         <Badge variant="secondary" className="text-xs">
                           {exp.type}
