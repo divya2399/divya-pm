@@ -8,7 +8,7 @@ const ExperienceSection = () => {
     period: "2022 - Present",
     location: "San Francisco, CA",
     type: "Full-time",
-    achievements: ["Led product strategy for B2B SaaS platform serving 500K+ users", "Increased user engagement by 45% through data-driven feature optimization", "Managed $2M product budget and cross-functional team of 12 members", "Launched 3 major product lines resulting in 30% revenue growth"],
+    achievements: ["Deployed BioTuring on AWS, improving research workflow efficiency by 30%", "Automated ML workflows with Kubeflow on AWS, reduced deployment time by 60%", "Standardized dev environments with Coder on AWS, boosted adoption by 40%"],
     skills: ["Product Strategy", "Team Leadership", "B2B SaaS", "Data Analytics"]
   }, {
     company: "InnovateLabs",
