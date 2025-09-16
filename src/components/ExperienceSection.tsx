@@ -22,7 +22,7 @@ const ExperienceSection = () => {
     period: "January 2021 - October 2023",
     type: "Full-time",
     achievements: ["Increased Prism Central adoption by 22% in six months through new features", "Identified and resolved 600+ customer issues, improving customer retention by 5%", "Collaborated with product team on 20+ critical bugs, reducing incidents by 16% and boosting reliability"],
-    skills: ["B2C SaaS", "Prioritization", "Documentation", "CRM"]
+    skills: ["B2C SaaS", "Prioritization", "Documentation", "Customer Relationship Management"]
   }];
   return <section id="experience" className="py-20 bg-surface">
       <div className="container mx-auto px-6">
