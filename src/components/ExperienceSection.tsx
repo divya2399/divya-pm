@@ -115,17 +115,7 @@ const ExperienceSection = () => {
             icon: CalendarDays,
             number: "7",
             label: "Years Experience"
-          }].map((stat, index) => <div key={index} className="text-center group">
-                <div className="p-4 bg-background rounded-lg mb-3 group-hover:bg-surface-muted transition-colors">
-                  <stat.icon className="h-8 w-8 text-primary mx-auto" />
-                </div>
-                <div className="text-2xl font-bold text-foreground mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </div>)}
+          }].map((stat, index) => {})}
           </div>
         </div>
       </div>
