@@ -19,10 +19,10 @@ const ExperienceSection = () => {
       skills: ["Product Strategy", "Roadmapping", "Product Lifecycle", "Data Analytics"]
     },
     {
-      company: "InnovateLabs",
-      role: "Product Manager",
-      period: "2020 - 2022",
-      location: "Austin, TX",
+      company: "Eli Lilly Pvt Ltd",
+      role: "Technical Product Analyst",
+      period: "October 2023 - June 2024",
+      location: "",
       type: "Full-time",
       achievements: [
         "Spearheaded mobile app redesign that improved user retention by 35%",
