@@ -4,7 +4,7 @@ import { CalendarDays, MapPin, TrendingUp, Users, Award } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [{
     company: "Regeneron Pharmaceuticals",
-    role: "Data Product Manager Co-op",
+    role: "Data Product manager",
     period: "June 2025 - Present",
     type: "Internship",
     achievements: ["Launched real-time dashboard, reducing manual effort from 16+ hours to zero", "Drove OKR adoption across 7 teams, improving analytics delivery and alignment", "Delivered 20+ upgrades, cut user effort by 37%, sped results by 12%", "Streamlined onboarding for 10+ tools, reduced time 33%, increased adoption 18%"],
