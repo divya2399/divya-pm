@@ -1,64 +1,30 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Code, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Database, 
-  Palette,
-  Cpu,
-  Globe
-} from "lucide-react";
-
+import { Code, BarChart3, Users, Zap, Database, Palette, Cpu, Globe } from "lucide-react";
 const SkillsSection = () => {
-  const skillCategories = [
-    {
-      icon: Code,
-      title: "Technical Skills",
-      color: "text-primary",
-      skills: [
-        "Java", "Python", "SQL", "Linux", "R", 
-        "Git", "Docker", "Kubernetes", "AWS"
-      ]
-    },
-    {
-      icon: BarChart3,
-      title: "Platforms & Tools",
-      color: "text-accent",
-      skills: [
-        "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot", "Notion", "Github", "Lovable"
-      ]
-    },
-    {
-      icon: Users,
-      title: "Product Management",
-      color: "text-primary-glow",
-      skills: [
-        "Roadmapping", "User Stories", "Wireframing", "Stakeholder Management", 
-        "Go-to-Market", "Feature Prioritization", "Objectives & Key Results", "SAFe"
-      ]
-    },
-    {
-      icon: Palette,
-      title: "Design & UX",
-      color: "text-accent",
-      skills: [
-        "Figma", "User Journey Mapping", "Prototyping", "Design Systems", 
-        "Usability Testing"
-      ]
-    }
-  ];
-
-  const tools = [
-    "Java", "Python", "SQL", "Linux", "R", "Git", "Docker", "Kubernetes", "AWS",
-    "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot", 
-    "Notion", "Github", "Lovable", "Figma"
-  ];
-
-
-  return (
-    <section id="skills" className="py-20 bg-background">
+  const skillCategories = [{
+    icon: Code,
+    title: "Technical Skills",
+    color: "text-primary",
+    skills: ["Java", "Python", "SQL", "Linux", "R", "Git", "Docker", "Kubernetes", "AWS"]
+  }, {
+    icon: BarChart3,
+    title: "Platforms & Tools",
+    color: "text-accent",
+    skills: ["Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot", "Notion", "Github", "Lovable"]
+  }, {
+    icon: Users,
+    title: "Product Management",
+    color: "text-primary-glow",
+    skills: ["Roadmapping", "User Stories", "Wireframing", "Stakeholder Management", "Go-to-Market", "Feature Prioritization", "Objectives & Key Results", "SAFe"]
+  }, {
+    icon: Palette,
+    title: "Design & UX",
+    color: "text-accent",
+    skills: ["Figma", "User Journey Mapping", "Prototyping", "Design Systems", "Usability Testing"]
+  }];
+  const tools = ["Java", "Python", "SQL", "Linux", "R", "Git", "Docker", "Kubernetes", "AWS", "Tableau", "JIRA", "Confluence", "Power BI", "Lucid Chart", "Copilot", "Notion", "Github", "Lovable", "Figma"];
+  return <section id="skills" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -77,11 +43,7 @@ const SkillsSection = () => {
 
           {/* Skill Categories */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {skillCategories.map((category, index) => (
-              <Card 
-                key={index} 
-                className="border-border/50 bg-surface hover:shadow-elegant transition-all duration-300 group"
-              >
+            {skillCategories.map((category, index) => <Card key={index} className="border-border/50 bg-surface hover:shadow-elegant transition-all duration-300 group">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-3 bg-surface-elevated rounded-lg group-hover:bg-primary/10 transition-colors">
@@ -93,61 +55,45 @@ const SkillsSection = () => {
                   </div>
                   
                   <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, skillIndex) => (
-                      <Badge 
-                        key={skillIndex}
-                        variant="secondary"
-                        className="bg-surface-muted hover:bg-primary/20 transition-colors cursor-default"
-                      >
+                    {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="bg-surface-muted hover:bg-primary/20 transition-colors cursor-default">
                         {skill}
-                      </Badge>
-                    ))}
+                      </Badge>)}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           {/* Tools & Platforms */}
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold text-foreground mb-6">
-              Tools & Platforms
-            </h3>
-            
-            <div className="flex flex-wrap gap-3 justify-center max-w-4xl mx-auto">
-              {tools.map((tool, index) => (
-                <Badge 
-                  key={index}
-                  variant="outline"
-                  className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary transition-all duration-300 px-4 py-2 text-sm"
-                >
-                  {tool}
-                </Badge>
-              ))}
-            </div>
-          </div>
+          
 
           {/* Proficiency Indicators */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Cpu, label: "Technical", level: "Expert" },
-              { icon: BarChart3, label: "Product", level: "Advanced" },
-              { icon: Users, label: "Design", level: "Intermediate" },
-              { icon: Globe, label: "Strategy", level: "Advanced" }
-            ].map((item, index) => (
-              <div key={index} className="text-center group">
+            {[{
+            icon: Cpu,
+            label: "Technical",
+            level: "Expert"
+          }, {
+            icon: BarChart3,
+            label: "Product",
+            level: "Advanced"
+          }, {
+            icon: Users,
+            label: "Design",
+            level: "Intermediate"
+          }, {
+            icon: Globe,
+            label: "Strategy",
+            level: "Advanced"
+          }].map((item, index) => <div key={index} className="text-center group">
                 <div className="p-4 bg-surface rounded-lg mb-3 group-hover:bg-surface-elevated transition-colors">
                   <item.icon className="h-8 w-8 text-primary mx-auto" />
                 </div>
                 <h4 className="font-semibold text-foreground mb-1">{item.label}</h4>
                 <p className="text-sm text-muted-foreground">{item.level}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SkillsSection;
