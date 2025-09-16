@@ -5,11 +5,11 @@ import { CalendarDays, MapPin, TrendingUp, Users, Award } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      company: "TechFlow Solutions",
-      role: "Senior Product Manager",
-      period: "2022 - Present",
-      location: "San Francisco, CA",
-      type: "Full-time",
+      company: "Regeneron Pharmaceuticals",
+      role: "Data Product Manager",
+      period: "June 2025 - Present",
+      location: "Tarrytown, New York",
+      type: "Internship",
       achievements: [
         "Led product strategy for B2B SaaS platform serving 500K+ users",
         "Increased user engagement by 45% through data-driven feature optimization",
