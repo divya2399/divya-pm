@@ -11,10 +11,10 @@ const ExperienceSection = () => {
       location: "Tarrytown, New York",
       type: "Internship",
       achievements: [
-        "Led product strategy for B2B SaaS platform serving 500K+ users",
-        "Increased user engagement by 45% through data-driven feature optimization",
-        "Managed $2M product budget and cross-functional team of 12 members",
-        "Launched 3 major product lines resulting in 30% revenue growth"
+        "Launched real-time dashboard, reducing manual effort from 16+ hours to zero.",
+        "Drove OKR adoption across 7 teams, improving analytics delivery and alignment.",
+        "Delivered 20+ upgrades, cut user effort by 37%, sped results by 12%.",
+        "Streamlined onboarding for 10+ tools, reduced time 33%, increased adoption 18%."
       ],
       skills: ["Product Strategy", "Team Leadership", "B2B SaaS", "Data Analytics"]
     },
