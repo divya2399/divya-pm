@@ -97,38 +97,6 @@ const ExperienceSection = () => {
               </Card>)}
           </div>
 
-          {/* Summary Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[{
-            icon: Users,
-            number: "50+",
-            label: "Team Members Led"
-          }, {
-            icon: TrendingUp,
-            number: "$5M+",
-            label: "Revenue Impact"
-          }, {
-            icon: Award,
-            number: "15+",
-            label: "Product Launches"
-          }, {
-            icon: CalendarDays,
-            number: "7",
-            label: "Years Experience"
-          }].map((stat, index) => (
-            <div key={index} className="text-center p-4 bg-surface-elevated rounded-lg">
-              <div className="p-3 bg-primary/10 rounded-lg mb-2 inline-block">
-                <stat.icon className="h-6 w-6 text-primary" />
-              </div>
-              <div className="text-2xl font-bold text-foreground mb-1">
-                {stat.number}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-          </div>
         </div>
       </div>
     </section>;
