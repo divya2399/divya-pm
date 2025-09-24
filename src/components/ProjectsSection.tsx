@@ -22,7 +22,7 @@ const ProjectsSection = () => {
       status: "Live"
     },
     {
-      title: "Mobile Fitness Companion",
+      title: "Naitiv AI - Interpretation Platform",
       description: "Product strategy and roadmap for a mobile fitness app that achieved 1M+ downloads. Focused on user engagement and personalized workout experiences.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
       technologies: ["React Native", "Node.js", "MongoDB", "Firebase"],
@@ -37,7 +37,7 @@ const ProjectsSection = () => {
       status: "Launched"
     },
     {
-      title: "AI-Powered Customer Support",
+      title: "A 21Seeds Story",
       description: "Designed and launched an intelligent customer support system using machine learning to automate 70% of routine inquiries while maintaining high satisfaction scores.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop",
       technologies: ["Python", "TensorFlow", "NLP", "React", "Redis"],
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
       status: "Live"
     },
     {
-      title: "B2B SaaS Dashboard Redesign",
+      title: "Future Pathway for Netflix",
       description: "Complete UX overhaul of a complex enterprise dashboard, resulting in 40% faster task completion and 60% reduction in user support tickets.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       technologies: ["Figma", "React", "TypeScript", "D3.js", "GraphQL"],
