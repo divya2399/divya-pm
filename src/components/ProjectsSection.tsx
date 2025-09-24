@@ -19,7 +19,6 @@ const ProjectsSection = () => {
         { type: "demo", label: "Live Demo", icon: Play },
         { type: "github", label: "GitHub", icon: Github }
       ],
-      status: "Live"
     },
     {
       title: "Naitiv AI - Interpretation Platform",
@@ -34,7 +33,6 @@ const ProjectsSection = () => {
       links: [
         { type: "external", label: "Case Study", icon: ExternalLink }
       ],
-      status: "Launched"
     },
     {
       title: "A 21Seeds Story",
@@ -50,7 +48,6 @@ const ProjectsSection = () => {
         { type: "demo", label: "Demo", icon: Play },
         { type: "external", label: "Blog Post", icon: ExternalLink }
       ],
-      status: "Live"
     },
     {
       title: "Future Pathway for Netflix",
@@ -65,7 +62,6 @@ const ProjectsSection = () => {
       links: [
         { type: "external", label: "Portfolio", icon: ExternalLink }
       ],
-      status: "Completed"
     }
   ];
 
