@@ -6,7 +6,7 @@ import { ExternalLink, Github, Play, TrendingUp, Users, Zap } from "lucide-react
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Enterprise Analytics Platform",
+      title: "AutoCook : A Product Roadmap",
       description: "Led development of a comprehensive analytics platform that processes 100M+ data points daily, serving Fortune 500 companies with real-time business insights.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       technologies: ["React", "Python", "AWS", "Docker", "PostgreSQL"],
