@@ -95,63 +95,48 @@ const ProjectsSection = () => {
                 className="border-border/50 bg-surface hover:shadow-elegant transition-all duration-300 group overflow-hidden"
               >
                 {/* Project Image */}
-                {index === 3 ? (
-                  <div className="relative h-48 overflow-hidden">
-                    <div style={{
-                      position: 'relative',
-                      width: '100%',
-                      height: '100%',
-                      paddingTop: '0',
-                      paddingBottom: '0',
-                      overflow: 'hidden',
-                      borderRadius: '8px'
-                    }}>
-                      <iframe 
-                        loading="lazy" 
-                        style={{
-                          position: 'absolute',
-                          width: '100%',
-                          height: '100%',
-                          top: '0',
-                          left: '0',
-                          border: 'none',
-                          padding: '0',
-                          margin: '0'
-                        }}
-                        src="https://www.canva.com/design/DAGkk1fsUGo/L6g1dhieB6Z5bSWmfqwZBg/view?embed" 
-                        allowFullScreen 
-                        allow="fullscreen"
-                      />
-                    </div>
-                    <Badge 
-                      className={`absolute top-4 right-4 ${
-                        project.status === 'Live' 
-                          ? 'bg-green-500/20 text-green-400 border-green-500/30' 
-                          : 'bg-primary/20 text-primary border-primary/30'
-                      }`}
-                    >
-                      {project.status}
-                    </Badge>
-                  </div>
-                ) : (
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                <div className="relative h-48 overflow-hidden">
+                  <div style={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100%',
+                    paddingTop: '0',
+                    paddingBottom: '0',
+                    overflow: 'hidden',
+                    borderRadius: '8px'
+                  }}>
+                    <iframe 
+                      loading="lazy" 
+                      style={{
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
+                        top: '0',
+                        left: '0',
+                        border: 'none',
+                        padding: '0',
+                        margin: '0'
+                      }}
+                      src={
+                        index === 0 ? "https://www.canva.com/design/DAGdblLSqOc/fsivy_Yly4cFkX5oGjGJkg/view?embed" :
+                        index === 1 ? "https://www.canva.com/design/DAGdbleNLpA/IM4KfObdzl5sVOda1lGbwQ/view?embed" :
+                        index === 2 ? "https://www.canva.com/design/DAGlMoHTKhk/mMGwX968CPCv0Vj_G8Ya2A/view?embed" :
+                        "https://www.canva.com/design/DAGkk1fsUGo/L6g1dhieB6Z5bSWmfqwZBg/view?embed"
+                      }
+                      allowFullScreen 
+                      allow="fullscreen"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
-                    <Badge 
-                      className={`absolute top-4 right-4 ${
-                        project.status === 'Live' 
-                          ? 'bg-green-500/20 text-green-400 border-green-500/30' 
-                          : 'bg-primary/20 text-primary border-primary/30'
-                      }`}
-                    >
-                      {project.status}
-                    </Badge>
                   </div>
-                )}
+                  <Badge 
+                    className={`absolute top-4 right-4 ${
+                      project.status === 'Live' 
+                        ? 'bg-green-500/20 text-green-400 border-green-500/30' 
+                        : 'bg-primary/20 text-primary border-primary/30'
+                    }`}
+                  >
+                    {project.status}
+                  </Badge>
+                </div>
 
                 <CardContent className="p-6">
                   {/* Project Title & Description */}
