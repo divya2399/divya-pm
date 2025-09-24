@@ -95,7 +95,7 @@ const ProjectsSection = () => {
                 className="border-border/50 bg-surface hover:shadow-elegant transition-all duration-300 group overflow-hidden"
               >
                 {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <div style={{
                     position: 'relative',
                     width: '100%',
