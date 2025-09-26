@@ -37,7 +37,7 @@ const ProjectsSection = () => {
       title: "A 21Seeds Story",
       description: "Designed and launched an intelligent customer support system using machine learning to automate 70% of routine inquiries while maintaining high satisfaction scores.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop",
-      technologies: ["Python", "TensorFlow", "NLP", "React", "Redis"],
+      technologies: ["GTM", "Pricing Strategy", "Market Expansion", "Collaboration"],
       metrics: [
         { icon: Users, label: "Tickets Resolved", value: "100K+" },
         { icon: TrendingUp, label: "Automation Rate", value: "70%" },
