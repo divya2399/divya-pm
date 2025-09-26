@@ -21,7 +21,7 @@ const ProjectsSection = () => {
     },
     {
       title: "Naitiv AI - Interpretation Platform",
-      description: "Product strategy and roadmap for a mobile fitness app that achieved 1M+ downloads. Focused on user engagement and personalized workout experiences.",
+      description: "Conducted market research and competitive analysis for an interpretation platform, focusing on developing GTM strategy and identifying MVP, to strengthen platform's market positioning.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
       technologies: ["Design Thinking", "User Research", "Empathy", "Communication"],
       metrics: [
