@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="mb-8 animate-fade-in">
             <div className="relative inline-block">
               <img src={profilePhoto} alt="Profile" className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover mx-auto shadow-elegant border-4 border-primary/20" />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20" />
+              <div className="absolute inset-0 rounded-full opacity-20" />
             </div>
           </div>
 

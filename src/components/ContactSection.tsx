@@ -51,28 +51,21 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "alex.johnson@email.com",
+      value: "divyasharma230499@gmail.com",
       description: "Best for detailed discussions",
       action: "Send Email"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "/in/alex-johnson-pm",
+      value: "/in/divya234",
       description: "Professional networking",
       action: "Connect"
     },
     {
-      icon: Twitter,
-      title: "Twitter",
-      value: "@alexjohnson_pm",
-      description: "Product insights & thoughts",
-      action: "Follow"
-    },
-    {
       icon: Calendar,
       title: "Schedule Call",
-      value: "calendly.com/alex-johnson",
+      value: "calendly.com/divyasharma230499",
       description: "Book a 30-minute chat",
       action: "Book Meeting"
     }
@@ -236,11 +229,11 @@ const ContactSection = () => {
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Location:</span>
-                      <span className="text-foreground">San Francisco, CA</span>
+                      <span className="text-foreground">New York City, NY</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Timezone:</span>
-                      <span className="text-foreground">PST (UTC-8)</span>
+                      <span className="text-foreground">EDT (GMT-4)</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Availability:</span>

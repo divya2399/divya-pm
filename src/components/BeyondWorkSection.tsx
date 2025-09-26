@@ -1,41 +1,37 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Camera, 
-  Mountain, 
+  Dog, 
+  CookingPot, 
   BookOpen, 
-  Heart, 
+  Palette, 
   Music, 
-  Plane,
+  Martini,
   Coffee,
-  Users
+  Sun
 } from "lucide-react";
 
 const BeyondWorkSection = () => {
   const interests = [
     {
-      icon: Camera,
-      title: "Photography",
-      description: "Landscape and street photography enthusiast. Love capturing moments that tell stories and showcase the beauty in everyday life.",
-      highlights: ["500px Featured Artist", "Local Gallery Exhibition", "Nature Photography Award"]
+      icon: Dog,
+      title: "Pet Parent",
+      description: "Overcame my life long fear of dogs to become a dog mom to a beautiful 2 year old Indian Pariah, named Lilly.",
     },
     {
-      icon: Mountain,
-      title: "Rock Climbing",
-      description: "Passionate about bouldering and sport climbing. The problem-solving aspect mirrors product challenges in interesting ways.",
-      highlights: ["V6 Bouldering Level", "Outdoor Climbing Trips", "Local Climbing Community Leader"]
+      icon: CookingPot,
+      title: "Cooking & Baking",
+      description: "Passionate about experimenting with different recipes; from banana bread to thai curry.",
     },
     {
       icon: BookOpen,
       title: "Continuous Learning",
       description: "Avid reader of product strategy, technology trends, and behavioral psychology. Always exploring new frameworks and methodologies.",
-      highlights: ["50+ Books/Year", "Product Management Courses", "Tech Conference Speaker"]
     },
     {
-      icon: Heart,
-      title: "Volunteer Work",
-      description: "Mentoring aspiring product managers and supporting local tech education initiatives for underrepresented communities.",
-      highlights: ["20+ Mentees", "STEM Education Programs", "Product Bootcamp Instructor"]
+      icon: Palette,
+      title: "Chasing Aesthetics",
+      description: "Always looking for aesthetics in life, home, products and people. I pick up a brush and a paper from time to time. ",
     }
   ];
 
@@ -43,22 +39,22 @@ const BeyondWorkSection = () => {
     {
       icon: Coffee,
       title: "Coffee Enthusiast",
-      description: "Third-wave coffee aficionado with a home espresso setup"
+      description: "There is no bad time for a good cup of coffee"
     },
     {
       icon: Music,
-      title: "Vinyl Collector",
-      description: "Building a collection of jazz and electronic music records"
+      title: "Musicophile",
+      description: "Looking for good music whenever I find the chance"
     },
     {
-      icon: Plane,
-      title: "Travel Explorer",
-      description: "Visited 25+ countries, always planning the next adventure"
+      icon: Martini,
+      title: "Day Drinker",
+      description: "Visiting a good bar? Count me in for happy hour"
     },
     {
-      icon: Users,
-      title: "Community Builder",
-      description: "Organizer of monthly product management meetups"
+      icon: Sun,
+      title: "Beach Lover",
+      description: "Always up for a good time at a sea shore"
     }
   ];
 
@@ -100,16 +96,6 @@ const BeyondWorkSection = () => {
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {interest.description}
                   </p>
-
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-foreground">Highlights:</h4>
-                    {interest.highlights.map((highlight, hIndex) => (
-                      <div key={hIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
-                        {highlight}
-                      </div>
-                    ))}
-                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -150,26 +136,12 @@ const BeyondWorkSection = () => {
             </h3>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               "I believe that the best products come from teams that embrace curiosity, 
-              empathy, and continuous learning. Whether I'm scaling a mountain, capturing 
-              a perfect sunset, or mentoring someone new to product management, I approach 
-              each challenge with the same principles: preparation, persistence, and 
-              genuine care for the outcome."
+              empathy, and continuous learning. Whether I'm running around a park with my dog, soaking in 
+              a perfect sunset, or engulfing myself in a new book, I approach 
+              each day and opportunity with the same mindset: calmness, persistence, and 
+              genuine care."
             </p>
             
-            <div className="flex justify-center gap-6 mt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">25+</div>
-                <div className="text-sm text-muted-foreground">Countries Visited</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-accent">20+</div>
-                <div className="text-sm text-muted-foreground">People Mentored</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary-glow">500+</div>
-                <div className="text-sm text-muted-foreground">Photos Taken</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

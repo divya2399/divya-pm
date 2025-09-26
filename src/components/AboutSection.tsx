@@ -36,12 +36,10 @@ const AboutSection = () => {
           {/* Bio Content */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
-              <p className="text-foreground leading-relaxed">I began my career exploring how technology can transform the way we work, driving meaningful outcomes in both BioTech and SaaS environments. Working closely with diverse teams, I gained a strong appreciation for building solutions that simplify comple</p>
-              <p className="text-foreground leading-relaxed">The more I collaborated across roles, the more I gravitated towards product management. It became clear that my strength lies in turning ambitious ideas into real, actionable products, whether through process improvements, intuitive dashboards, or aum</p>
+              <p className="text-foreground leading-relaxed">I started my career curious about how technology could transform the way we work, gaining experience in both BioTech and SaaS. Along the way, I saw how the right solutions can simplify complexity and deliver real impact.</p>
+              <p className="text-foreground leading-relaxed">Working across teams, I naturally gravitated toward product management—where ideas become tangible outcomes. From streamlining processes to building dashboards and automations, I found my strength in turning vision into action.</p>
               <p className="text-foreground leading-relaxed">
-                I believe in data-driven decision making, agile methodologies, and fostering 
-                collaborative environments where innovation thrives. My approach focuses on 
-                understanding user pain points and translating them into scalable technical solutions.
+                Today, I bring a data-driven, agile, and collaborative approach to product management, always focused on uncovering user pain points and shaping them into scalable solutions that spark innovation.
               </p>
             </div>
 

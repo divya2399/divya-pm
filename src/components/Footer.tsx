@@ -13,18 +13,11 @@ const Footer = () => {
           {/* Left Section */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold text-foreground mb-2">
-              Alex Johnson
+              Divya Sharma
             </h3>
             <p className="text-muted-foreground">
-              Senior Product Manager & Tech Strategist
+              Product Manager & Tech Enthusiast
             </p>
-          </div>
-
-          {/* Center Section */}
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <span>Built with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-current" />
-            <span>using React & Tailwind CSS</span>
           </div>
 
           {/* Right Section */}
@@ -42,9 +35,9 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-border/50 mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Alex Johnson. All rights reserved. 
+            © {new Date().getFullYear()} Divya Sharma. All rights reserved. 
             <span className="block mt-1">
-              This portfolio template is customizable for your own professional use.
+              Created with ♥︎.
             </span>
           </p>
         </div>
