@@ -10,8 +10,14 @@ const ProjectsSection = () => {
       description: "Led development of a comprehensive analytics platform that processes 100M+ data points daily, serving Fortune 500 companies with real-time business insights.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       technologies: ["User Research", "Data Analysis", "Roadmapping", "Pricing"],
-
-
+      metrics: [
+        { icon: Users, label: "Market Research", value: "500+" },
+        { icon: TrendingUp, label: "Growth Strategy", value: "3x" },
+        { icon: Zap, label: "Time to Market", value: "6mo" }
+      ],
+      links: [
+        { type: "external", label: "View Project", icon: ExternalLink }
+      ],
     },
     {
       title: "Naitiv AI - Interpretation Platform",
