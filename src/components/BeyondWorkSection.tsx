@@ -135,11 +135,8 @@ const BeyondWorkSection = () => {
               Personal Philosophy
             </h3>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              "I believe that the best products come from teams that embrace curiosity, 
-              empathy, and continuous learning. Whether I'm running around a park with my dog, soaking in 
-              a perfect sunset, or engulfing myself in a new book, I approach 
-              each day and opportunity with the same mindset: calmness, persistence, and 
-              genuine care."
+              "For me, it’s always been about finding clarity in the chaos—taking something messy or complex and shaping it into something people can actually connect with and use. 
+              I lean on curiosity to uncover what really matters and empathy to make sure the outcome speaks to people, not just processes."
             </p>
             
           </div>
