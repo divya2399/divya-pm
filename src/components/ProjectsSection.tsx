@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       title: "AutoCook : A Product Roadmap",
       description: "Led development of a comprehensive analytics platform that processes 100M+ data points daily, serving Fortune 500 companies with real-time business insights.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: ["Market Research", "Data Analysis", "Roadmapping", "Pricing"],
+      technologies: ["Product Development", "Data Analysis", "Roadmapping", "Pricing"],
       metrics: [
         { icon: Users, label: "Market Research", value: "500+" },
         { icon: TrendingUp, label: "Growth Strategy", value: "3x" },
@@ -50,9 +50,9 @@ const ProjectsSection = () => {
     },
     {
       title: "Future Pathway for Netflix",
-      description: "Complete UX overhaul of a complex enterprise dashboard, resulting in 40% faster task completion and 60% reduction in user support tickets.",
+      description: "Synthesized Netflix’s competitive landscape using market, and scenario analyses to translate insights into a phased strategy and learnings in user research, prioritization, and outcome-focused roadmapping",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["Figma", "React", "TypeScript", "D3.js", "GraphQL"],
+      technologies: ["Strategy", "Critical Thinking", "Market Analysis", "Prioritization"],
       metrics: [
         { icon: Users, label: "Enterprise Clients", value: "200+" },
         { icon: TrendingUp, label: "Task Efficiency", value: "+40%" },
