@@ -23,7 +23,7 @@ const ProjectsSection = () => {
       title: "Naitiv AI - Interpretation Platform",
       description: "Product strategy and roadmap for a mobile fitness app that achieved 1M+ downloads. Focused on user engagement and personalized workout experiences.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-      technologies: ["Design Thinking", "User Research", "Customer Empathy", "Communication"],
+      technologies: ["Design Thinking", "User Research", "Empathy", "Communication"],
       metrics: [
         { icon: Users, label: "Downloads", value: "1M+" },
         { icon: TrendingUp, label: "User Retention", value: "65%" },
