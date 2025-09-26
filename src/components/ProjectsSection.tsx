@@ -131,7 +131,7 @@ const ProjectsSection = () => {
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {project.description}
+                    {index === 0 ? "Spearheaded product strategy for an AI-powered cooking appliance, leveraging market research, competitor analysis, and user profiling to define unique differentiators to enhance product-market fit." : project.description}
                   </p>
 
                   {/* Technologies */}
