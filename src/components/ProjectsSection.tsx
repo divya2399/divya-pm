@@ -123,15 +123,6 @@ const ProjectsSection = () => {
                       allow="fullscreen"
                     />
                   </div>
-                  <Badge 
-                    className={`absolute top-4 right-4 ${
-                      project.status === 'Live' 
-                        ? 'bg-green-500/20 text-green-400 border-green-500/30' 
-                        : 'bg-primary/20 text-primary border-primary/30'
-                    }`}
-                  >
-                    {project.status}
-                  </Badge>
                 </div>
 
                 <CardContent className="p-6">
