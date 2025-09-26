@@ -131,7 +131,7 @@ const ProjectsSection = () => {
                   </h3>
                   <p className="text-muted-foreground mb-4">
                     {index === 0 ? "Spearheaded product strategy for an AI-powered cooking appliance, leveraging market research, competitor analysis, and user profiling to define unique differentiators to enhance product-market fit." : 
-                     index === 1 ? "Conducted market research and competitive analysis for Naitiv AI's interpretation platform, focusing on developing go-to-market strategy and identifying unique value propositions, to strengthen platform's market positioning." : 
+                     index === 1 ? "Conducted market research and competitive analysis for an interpretation platform, focusing on developing GTM strategy and identifying unique value propositions, to strengthen platform's market positioning." : 
                      project.description}
                   </p>
 
