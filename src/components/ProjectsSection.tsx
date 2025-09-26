@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       title: "AutoCook : A Product Roadmap",
       description: "Led development of a comprehensive analytics platform that processes 100M+ data points daily, serving Fortune 500 companies with real-time business insights.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: ["User Research", "Data Analysis", "Roadmapping", "Pricing"],
+      technologies: ["Market Research", "Data Analysis", "Roadmapping", "Pricing"],
       metrics: [
         { icon: Users, label: "Market Research", value: "500+" },
         { icon: TrendingUp, label: "Growth Strategy", value: "3x" },
@@ -23,7 +23,7 @@ const ProjectsSection = () => {
       title: "Naitiv AI - Interpretation Platform",
       description: "Product strategy and roadmap for a mobile fitness app that achieved 1M+ downloads. Focused on user engagement and personalized workout experiences.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-      technologies: ["React Native", "Node.js", "MongoDB", "Firebase"],
+      technologies: ["Design Thinking", "User Research", "Customer Empathy", "Communication"],
       metrics: [
         { icon: Users, label: "Downloads", value: "1M+" },
         { icon: TrendingUp, label: "User Retention", value: "65%" },
