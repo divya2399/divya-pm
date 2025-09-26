@@ -155,20 +155,7 @@ const ProjectsSection = () => {
             ))}
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <p className="text-muted-foreground mb-6">
-              Interested in seeing more detailed case studies?
-            </p>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
-            >
-              <ExternalLink className="mr-2 h-5 w-5" />
-              View Full Portfolio
-            </Button>
-          </div>
+
         </div>
       </div>
     </section>
