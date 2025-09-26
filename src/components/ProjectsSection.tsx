@@ -9,16 +9,9 @@ const ProjectsSection = () => {
       title: "AutoCook : A Product Roadmap",
       description: "Led development of a comprehensive analytics platform that processes 100M+ data points daily, serving Fortune 500 companies with real-time business insights.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      technologies: ["React", "Python", "AWS", "Docker", "PostgreSQL"],
-      metrics: [
-        { icon: Users, label: "Active Users", value: "50K+" },
-        { icon: TrendingUp, label: "Revenue Impact", value: "$2M+" },
-        { icon: Zap, label: "Performance", value: "99.9%" }
-      ],
-      links: [
-        { type: "demo", label: "Live Demo", icon: Play },
-        { type: "github", label: "GitHub", icon: Github }
-      ],
+      technologies: ["User Research", "Data Analysis", "Roadmapping", "Pricing"],
+
+
     },
     {
       title: "Naitiv AI - Interpretation Platform",
