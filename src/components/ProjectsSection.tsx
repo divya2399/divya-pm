@@ -147,38 +147,6 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-3 mb-4">
-                    {project.metrics.map((metric, metricIndex) => (
-                      <div key={metricIndex} className="text-center">
-                        <div className="p-2 bg-surface-elevated rounded-lg mb-1">
-                          <metric.icon className="h-4 w-4 text-primary mx-auto" />
-                        </div>
-                        <div className="text-sm font-semibold text-foreground">
-                          {metric.value}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {metric.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Project Links */}
-                  <div className="flex gap-2 pt-4 border-t border-border/50">
-                    {project.links.map((link, linkIndex) => (
-                      <Button 
-                        key={linkIndex}
-                        variant="outline"
-                        size="sm"
-                        className="border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
-                      >
-                        <link.icon className="mr-2 h-4 w-4" />
-                        {link.label}
-                      </Button>
-                    ))}
-                  </div>
                 </CardContent>
               </Card>
             ))}
