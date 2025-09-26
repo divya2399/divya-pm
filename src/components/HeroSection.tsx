@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Linkedin, Github, Mail } from "lucide-react";
+import { Download, Linkedin, Mail } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 const HeroSection = () => {
   return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -38,21 +38,20 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-scale-in" style={{
           animationDelay: '0.4s'
         }}>
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group">
-              <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              Download Resume
-            </Button>
+            <a href="/Divya_Sharma_Product_Resume.pdf" download="Divya_Sharma_Product_Resume.pdf">
+              <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group">
+                <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Download Resume
+              </Button>
+            </a>
             
             <div className="flex gap-3">
-              <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300">
-                <Linkedin className="mr-2 h-5 w-5" />
-                LinkedIn
-              </Button>
-              
-              <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300">
-                <Github className="mr-2 h-5 w-5" />
-                GitHub
-              </Button>
+              <a href="https://www.linkedin.com/in/divya234/" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" className="border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300">
+                  <Linkedin className="mr-2 h-5 w-5" />
+                  LinkedIn
+                </Button>
+              </a>
             </div>
           </div>
 
