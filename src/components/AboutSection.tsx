@@ -27,19 +27,20 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-56 h-56 bg-accent/10 rounded-full blur-3xl" />
+    <section id="about" className="py-24 bg-background-light relative overflow-hidden">
+      {/* Tech grid background */}
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <div className="absolute top-20 right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl glow-primary" />
+      <div className="absolute bottom-20 left-10 w-56 h-56 bg-accent/10 rounded-full blur-3xl glow-accent" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="mb-16 animate-fade-in">
-            <Badge variant="outline" className="mb-4 border-coral/40 text-coral bg-coral/5 px-4 py-1">
+            <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/5 px-5 py-1.5 font-medium">
               About Me
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground-dark mb-6 max-w-2xl tracking-tight">
               Building Products That{" "}
               <span className="text-transparent bg-clip-text bg-gradient-primary">Matter</span>
             </h2>
@@ -49,8 +50,8 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-12 gap-8 mb-16">
             {/* Bio - Takes more space */}
             <div className="lg:col-span-7 space-y-6 animate-slide-in-left">
-              <div className="bg-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-500 hover-lift">
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+              <div className="bg-surface-light backdrop-blur-sm rounded-2xl p-8 border-2 border-border/30 hover:border-primary/50 transition-all duration-500 hover-lift hover-tech">
+                <p className="text-lg text-foreground-dark leading-relaxed mb-6">
                   Drawing on over 4 years of experience across SaaS and BioTech industries, I bridge business challenges and technology to deliver results. I work consistently towards efficiency and driving value for users and organizations alike.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed mb-6">
