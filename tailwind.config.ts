@@ -28,6 +28,7 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
           glow: "hsl(var(--primary-glow))",
+          muted: "hsl(var(--primary-muted))",
         },
         coral: {
           DEFAULT: "hsl(var(--coral))",
@@ -49,6 +50,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          muted: "hsl(var(--accent-muted))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -71,16 +73,20 @@ export default {
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
+        "gradient-primary-subtle": "var(--gradient-primary-subtle)",
         "gradient-coral": "var(--gradient-coral)",
         "gradient-surface": "var(--gradient-surface)",
         "gradient-accent": "var(--gradient-accent)",
         "gradient-hero": "var(--gradient-hero)",
+        "gradient-tech": "var(--gradient-tech)",
       },
       boxShadow: {
         elegant: "var(--shadow-elegant)",
         glow: "var(--shadow-glow)",
+        "glow-strong": "var(--shadow-glow-strong)",
         coral: "var(--shadow-coral)",
         accent: "var(--shadow-accent)",
+        tech: "var(--shadow-tech)",
       },
       transitionTimingFunction: {
         smooth: "var(--transition-smooth)",

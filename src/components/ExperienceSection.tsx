@@ -44,18 +44,20 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 bg-surface relative overflow-hidden">
-      {/* Decorative background */}
+    <section id="experience" className="py-24 bg-background relative overflow-hidden">
+      {/* Tech grid and gradients */}
+      <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl glow-accent" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="mb-16 animate-fade-in">
-            <Badge variant="outline" className="mb-4 border-accent/40 text-accent bg-accent/5 px-4 py-1">
+            <Badge variant="outline" className="mb-4 border-accent/50 text-accent bg-accent/5 px-5 py-1.5 font-medium">
               Professional Experience
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-6 max-w-2xl tracking-tight">
               Career Journey &{" "}
               <span className="text-transparent bg-clip-text bg-gradient-accent">Achievements</span>
             </h2>
@@ -67,8 +69,8 @@ const ExperienceSection = () => {
 
           {/* Timeline with alternating layout */}
           <div className="relative">
-            {/* Timeline line - visible on desktop */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-coral transform -translate-x-1/2" />
+            {/* Tech-styled timeline line */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-coral transform -translate-x-1/2 opacity-50" />
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -79,20 +81,20 @@ const ExperienceSection = () => {
                   }`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  {/* Timeline dot */}
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-6 h-6 rounded-full border-4 border-background bg-gradient-primary transform -translate-x-1/2 shadow-glow z-10" />
+                  {/* Tech timeline node */}
+                  <div className="hidden lg:block absolute top-8 left-1/2 w-6 h-6 rounded-full border-4 border-background bg-gradient-primary transform -translate-x-1/2 shadow-glow-strong z-10 glow-primary" />
 
-                  <Card className={`border-border/50 bg-gradient-surface hover:shadow-elegant transition-all duration-500 hover-lift lg:w-11/12 ${
+                  <Card className={`border-2 border-primary/20 bg-surface hover:shadow-tech hover:border-primary/40 transition-all duration-500 hover-tech lg:w-11/12 group ${
                     index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-auto'
                   }`}>
                     <CardContent className="p-8">
                       {/* Header */}
                       <div className="mb-6">
                         <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-2xl font-bold text-foreground">
+                          <h3 className="text-2xl font-bold font-display text-foreground">
                             {exp.role}
                           </h3>
-                          <Badge variant="outline" className="border-coral/40 text-coral bg-coral/10">
+                          <Badge variant="outline" className="border-coral/50 text-coral bg-coral/10 font-medium">
                             {exp.type}
                           </Badge>
                         </div>
@@ -101,7 +103,7 @@ const ExperienceSection = () => {
                           {exp.company}
                         </h4>
                         
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
                           <CalendarDays className="h-4 w-4" />
                           {exp.period}
                         </div>
@@ -109,13 +111,13 @@ const ExperienceSection = () => {
 
                       {/* Achievements */}
                       <div className="mb-6">
-                        <h5 className="font-bold text-foreground mb-4 flex items-center gap-2 text-base">
+                        <h5 className="font-bold text-foreground mb-4 flex items-center gap-2 text-base font-display">
                           <Award className="h-5 w-5 text-accent" />
                           Key Achievements
                         </h5>
                         <ul className="space-y-3">
                           {exp.achievements.map((achievement, achIndex) => (
-                            <li key={achIndex} className="flex items-start gap-3 text-muted-foreground group">
+                            <li key={achIndex} className="flex items-start gap-3 text-muted-foreground group-hover:text-foreground transition-colors">
                               <div className="w-2 h-2 bg-coral rounded-full mt-2 flex-shrink-0 group-hover:scale-150 transition-transform" />
                               <span className="leading-relaxed">{achievement}</span>
                             </li>
@@ -125,7 +127,7 @@ const ExperienceSection = () => {
 
                       {/* Skills */}
                       <div>
-                        <h5 className="font-bold text-foreground mb-3 flex items-center gap-2 text-base">
+                        <h5 className="font-bold text-foreground mb-3 flex items-center gap-2 text-base font-display">
                           <TrendingUp className="h-5 w-5 text-primary" />
                           Core Skills
                         </h5>
@@ -134,13 +136,16 @@ const ExperienceSection = () => {
                             <Badge 
                               key={skillIndex} 
                               variant="outline" 
-                              className="border-primary/30 text-xs hover:bg-primary/10 hover:border-primary hover:scale-105 transition-all"
+                              className="border-primary/40 text-xs hover:bg-primary/10 hover:border-primary hover:scale-105 transition-all font-medium"
                             >
                               {skill}
                             </Badge>
                           ))}
                         </div>
                       </div>
+                      
+                      {/* Decorative tech accent */}
+                      <div className="mt-6 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
                     </CardContent>
                   </Card>
                 </div>

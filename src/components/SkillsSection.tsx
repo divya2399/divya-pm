@@ -38,19 +38,20 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-surface relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+    <section id="skills" className="py-24 bg-background relative overflow-hidden">
+      {/* Tech background elements */}
+      <div className="absolute inset-0 grid-pattern-dense opacity-15" />
+      <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl glow-primary" />
       <div className="absolute bottom-10 right-10 w-64 h-64 bg-coral/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="mb-16 animate-fade-in">
-            <Badge variant="outline" className="mb-4 border-primary/40 text-primary bg-primary/5 px-4 py-1">
+            <Badge variant="outline" className="mb-4 border-primary/50 text-primary bg-primary/5 px-5 py-1.5 font-medium">
               Skills & Expertise
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 max-w-3xl">
+            <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-6 max-w-3xl tracking-tight">
               Technical &{" "}
               <span className="text-transparent bg-clip-text bg-gradient-accent">Strategic Capabilities</span>
             </h2>
@@ -60,24 +61,34 @@ const SkillsSection = () => {
             </p>
           </div>
 
-          {/* Skill Categories - Masonry-like grid */}
+          {/* Skill Categories - Modular tech cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {skillCategories.map((category, index) => (
               <Card 
                 key={index} 
-                className={`border-border/50 bg-gradient-surface hover:shadow-${category.color} transition-all duration-500 hover-lift animate-scale-in ${
-                  index === 0 ? 'md:row-span-1' : ''
-                } ${
+                className={`border-2 ${
+                  category.color === 'primary' ? 'border-primary/30 hover:border-primary/60' :
+                  category.color === 'accent' ? 'border-accent/30 hover:border-accent/60' :
+                  'border-coral/30 hover:border-coral/60'
+                } bg-surface hover:shadow-tech transition-all duration-500 hover-tech animate-scale-in group ${
                   index === 2 ? 'md:translate-y-6' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`p-4 bg-${category.color}/10 rounded-2xl border-2 border-${category.color}/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                      <category.icon className={`h-7 w-7 text-${category.color}`} />
+                    <div className={`p-4 rounded-2xl border-2 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 ${
+                      category.color === 'primary' ? 'bg-primary/10 border-primary/40' :
+                      category.color === 'accent' ? 'bg-accent/10 border-accent/40' :
+                      'bg-coral/10 border-coral/40'
+                    }`}>
+                      <category.icon className={`h-7 w-7 ${
+                        category.color === 'primary' ? 'text-primary' :
+                        category.color === 'accent' ? 'text-accent' :
+                        'text-coral'
+                      }`} />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="text-xl font-bold font-display text-foreground">
                       {category.title}
                     </h3>
                   </div>
@@ -87,23 +98,31 @@ const SkillsSection = () => {
                       <Badge 
                         key={skillIndex} 
                         variant="outline" 
-                        className={`border-${category.color}/30 bg-${category.color}/5 text-foreground hover:bg-${category.color}/20 hover:scale-105 transition-all cursor-default`}
+                        className={`text-foreground hover:scale-105 transition-all cursor-default font-medium ${
+                          category.color === 'primary' ? 'border-primary/40 bg-primary/5 hover:bg-primary/20' :
+                          category.color === 'accent' ? 'border-accent/40 bg-accent/5 hover:bg-accent/20' :
+                          'border-coral/40 bg-coral/5 hover:bg-coral/20'
+                        }`}
                       >
                         {skill}
                       </Badge>
                     ))}
                   </div>
 
-                  {/* Decorative accent */}
-                  <div className={`mt-6 h-1 w-16 bg-gradient-${category.color === 'coral' ? 'coral' : category.color === 'accent' ? 'accent' : 'primary'} rounded-full`} />
+                  {/* Tech accent line */}
+                  <div className={`mt-6 h-1 w-16 rounded-full ${
+                    category.color === 'coral' ? 'bg-gradient-coral' :
+                    category.color === 'accent' ? 'bg-gradient-accent' :
+                    'bg-gradient-primary'
+                  }`} />
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          {/* Proficiency Indicators - Circular cards */}
+          {/* Proficiency Indicators - Clean circular tech cards */}
           <div className="animate-fade-in">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-10 text-center">
               Proficiency Levels
             </h3>
             
@@ -114,21 +133,41 @@ const SkillsSection = () => {
                   className="group animate-rotate-in"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
-                  <Card className={`border-2 border-${item.color}/30 bg-gradient-surface hover:bg-${item.color}/5 hover:border-${item.color} hover:shadow-${item.color} transition-all duration-500 hover-lift`}>
+                  <Card className={`border-2 bg-surface hover:shadow-tech transition-all duration-500 hover-tech ${
+                    item.color === 'primary' ? 'border-primary/40 hover:border-primary/70 hover:bg-primary/5' :
+                    item.color === 'coral' ? 'border-coral/40 hover:border-coral/70 hover:bg-coral/5' :
+                    'border-accent/40 hover:border-accent/70 hover:bg-accent/5'
+                  }`}>
                     <CardContent className="p-8 text-center">
-                      <div className={`relative inline-block mb-4`}>
-                        {/* Circular background */}
-                        <div className={`absolute inset-0 bg-${item.color}/10 rounded-full blur-xl group-hover:blur-2xl transition-all`} />
+                      <div className="relative inline-block mb-4">
+                        {/* Glow effect */}
+                        <div className={`absolute inset-0 rounded-full blur-xl group-hover:blur-2xl transition-all ${
+                          item.color === 'primary' ? 'bg-primary/20' :
+                          item.color === 'coral' ? 'bg-coral/20' :
+                          'bg-accent/20'
+                        }`} />
                         
-                        <div className={`relative p-5 bg-${item.color}/10 rounded-full border-2 border-${item.color}/30 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
-                          <item.icon className={`h-10 w-10 text-${item.color}`} />
+                        <div className={`relative p-5 rounded-full border-2 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 ${
+                          item.color === 'primary' ? 'bg-primary/10 border-primary/40' :
+                          item.color === 'coral' ? 'bg-coral/10 border-coral/40' :
+                          'bg-accent/10 border-accent/40'
+                        }`}>
+                          <item.icon className={`h-10 w-10 ${
+                            item.color === 'primary' ? 'text-primary' :
+                            item.color === 'coral' ? 'text-coral' :
+                            'text-accent'
+                          }`} />
                         </div>
                       </div>
                       
-                      <h4 className="font-bold text-foreground mb-2 text-lg">
+                      <h4 className="font-bold font-display text-foreground mb-2 text-lg">
                         {item.label}
                       </h4>
-                      <p className={`text-sm font-medium text-${item.color}`}>
+                      <p className={`text-sm font-medium ${
+                        item.color === 'primary' ? 'text-primary' :
+                        item.color === 'coral' ? 'text-coral' :
+                        'text-accent'
+                      }`}>
                         {item.level}
                       </p>
                     </CardContent>
