@@ -6,56 +6,67 @@
 
 @layer base {
   :root {
-    /* Dark portfolio theme */
-    --background: 220 13% 8%;
-    --foreground: 210 17% 95%;
+    /* Deep charcoal base */
+    --background: 0 0% 7%;
+    --foreground: 30 8% 95%;
     
     /* Surface colors */
-    --surface: 220 13% 11%;
-    --surface-muted: 220 13% 14%;
-    --surface-elevated: 220 13% 16%;
+    --surface: 0 0% 10%;
+    --surface-muted: 0 0% 13%;
+    --surface-elevated: 0 0% 15%;
 
-    --card: 220 13% 11%;
-    --card-foreground: 210 17% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 30 8% 95%;
 
-    --popover: 220 13% 11%;
-    --popover-foreground: 210 17% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 30 8% 95%;
 
-    /* Brand colors */
-    --primary: 195 100% 65%;
-    --primary-foreground: 220 13% 8%;
-    --primary-glow: 195 100% 75%;
+    /* Soft teal/turquoise - main accent */
+    --primary: 180 65% 55%;
+    --primary-foreground: 0 0% 7%;
+    --primary-glow: 180 75% 65%;
 
-    --secondary: 220 13% 16%;
-    --secondary-foreground: 210 17% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 30 8% 95%;
 
-    --muted: 220 13% 14%;
-    --muted-foreground: 215 15% 65%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 30 5% 60%;
 
-    --accent: 45 100% 70%;
-    --accent-foreground: 220 13% 8%;
+    /* Warm muted gold/mustard */
+    --accent: 40 80% 60%;
+    --accent-foreground: 0 0% 7%;
+
+    /* Coral/peach for buttons and energy */
+    --coral: 15 85% 65%;
+    --coral-foreground: 0 0% 7%;
+    --coral-glow: 15 90% 75%;
 
     --destructive: 0 75% 60%;
-    --destructive-foreground: 210 17% 95%;
+    --destructive-foreground: 30 8% 95%;
 
-    --border: 220 13% 20%;
-    --input: 220 13% 16%;
-    --ring: 195 100% 65%;
+    --border: 0 0% 18%;
+    --input: 0 0% 15%;
+    --ring: 180 65% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
     
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-surface: linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-elevated)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(45 100% 80%));
+    /* Unique gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(var(--coral)) 0%, hsl(var(--coral-glow)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(40 85% 70%) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(var(--surface)) 0%, hsl(var(--surface-elevated)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 7%) 0%, hsl(180 30% 10%) 50%, hsl(0 0% 10%) 100%);
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(220 13% 5% / 0.8);
-    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.2);
+    /* Shadows with warmth */
+    --shadow-elegant: 0 10px 40px -15px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 50px hsl(var(--primary) / 0.25);
+    --shadow-coral: 0 4px 30px hsl(var(--coral) / 0.3);
+    --shadow-accent: 0 4px 30px hsl(var(--accent) / 0.25);
     
-    /* Animations */
+    /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -141,7 +152,7 @@
   }
 }
 
-/* Professional animations */
+/* Custom animations */
 @layer utilities {
   .animate-float {
     animation: float 6s ease-in-out infinite;
@@ -155,27 +166,69 @@
     animation: slideUp 0.6s ease-out forwards;
   }
   
+  .animate-slide-in-left {
+    animation: slideInLeft 0.7s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.7s ease-out forwards;
+  }
+  
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-rotate-in {
+    animation: rotateIn 0.8s ease-out forwards;
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
   }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(2deg); }
+  66% { transform: translateY(-8px) rotate(-2deg); }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(40px); }
+  from { opacity: 0; transform: translateY(50px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.95); }
+  from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotateIn {
+  from { 
+    opacity: 0; 
+    transform: rotate(-10deg) scale(0.9); 
+  }
+  to { 
+    opacity: 1; 
+    transform: rotate(0deg) scale(1); 
+  }
 }
