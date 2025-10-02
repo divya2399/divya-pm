@@ -10,18 +10,18 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#beyond", label: "Beyond Work" },
-    { href: "#contact", label: "Contact" },
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Beyond Work", href: "#beyond" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -34,30 +34,32 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-xl border-b-2 border-primary/20 shadow-tech"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-soft"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
           <button
             onClick={() => scrollToSection("#home")}
-            className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
+            className="text-2xl font-bold font-display text-foreground hover:text-primary transition-colors"
           >
-            Portfolio
+            DS
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
               <button
-                key={item.href}
-                onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                key={link.name}
+                onClick={() => scrollToSection(link.href)}
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors relative group"
               >
-                {item.label}
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </div>
@@ -65,25 +67,29 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
-            size="sm"
+            size="icon"
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-surface/95 backdrop-blur-lg">
-            <div className="py-4 space-y-2">
-              {navItems.map((item) => (
+          <div className="md:hidden py-6 border-t border-border/50 bg-background/95 backdrop-blur-xl animate-soft-fade-in">
+            <div className="flex flex-col gap-4">
+              {navLinks.map((link) => (
                 <button
-                  key={item.href}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-2 text-foreground hover:text-primary hover:bg-surface-muted transition-colors rounded-md"
+                  key={link.name}
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-base font-medium text-foreground/70 hover:text-primary transition-colors text-left px-4 py-2 rounded-lg hover:bg-muted"
                 >
-                  {item.label}
+                  {link.name}
                 </button>
               ))}
             </div>

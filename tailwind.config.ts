@@ -13,52 +13,44 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        accent: ['Cormorant Garamond', 'Georgia', 'serif'],
+      },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        surface: {
-          DEFAULT: "hsl(var(--surface))",
-          muted: "hsl(var(--surface-muted))",
-          elevated: "hsl(var(--surface-elevated))",
-        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-          glow: "hsl(var(--primary-glow))",
-          muted: "hsl(var(--primary-muted))",
-        },
-        coral: {
-          DEFAULT: "hsl(var(--coral))",
-          foreground: "hsl(var(--coral-foreground))",
-          glow: "hsl(var(--coral-glow))",
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
         },
         muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-          muted: "hsl(var(--accent-muted))",
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))'
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -70,33 +62,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        terracotta: 'hsl(13 60% 60%)',
+        blush: 'hsl(15 75% 80%)',
+        charcoal: 'hsl(0 0% 20%)',
+        ivory: 'hsl(30 40% 96%)',
       },
       backgroundImage: {
-        "gradient-primary": "var(--gradient-primary)",
-        "gradient-primary-subtle": "var(--gradient-primary-subtle)",
-        "gradient-coral": "var(--gradient-coral)",
-        "gradient-surface": "var(--gradient-surface)",
-        "gradient-accent": "var(--gradient-accent)",
-        "gradient-hero": "var(--gradient-hero)",
-        "gradient-tech": "var(--gradient-tech)",
+        'gradient-primary': 'linear-gradient(135deg, hsl(13 60% 60%) 0%, hsl(15 75% 80%) 100%)',
+        'gradient-accent': 'linear-gradient(135deg, hsl(15 75% 80%) 0%, hsl(13 60% 60%) 100%)',
+        'gradient-warm': 'linear-gradient(180deg, hsl(30 40% 96%) 0%, hsl(30 35% 92%) 100%)',
       },
       boxShadow: {
-        elegant: "var(--shadow-elegant)",
-        glow: "var(--shadow-glow)",
-        "glow-strong": "var(--shadow-glow-strong)",
-        coral: "var(--shadow-coral)",
-        accent: "var(--shadow-accent)",
-        tech: "var(--shadow-tech)",
-      },
-      transitionTimingFunction: {
-        smooth: "var(--transition-smooth)",
-        spring: "var(--transition-spring)",
-        bounce: "var(--transition-bounce)",
-      },
-      fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Inter", "system-ui", "sans-serif"],
-        body: ["Inter", "system-ui", "sans-serif"],
+        soft: '0 8px 30px -8px hsl(13 60% 60% / 0.12)',
+        elegant: '0 12px 40px -10px hsl(13 60% 60% / 0.18)',
+        blush: '0 8px 25px -6px hsl(15 75% 80% / 0.25)',
+        lift: '0 15px 50px -12px hsl(13 60% 60% / 0.2), 0 5px 20px -5px hsl(15 75% 80% / 0.15)',
       },
       borderRadius: {
         lg: "var(--radius)",

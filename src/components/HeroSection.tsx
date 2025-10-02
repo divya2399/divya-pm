@@ -4,47 +4,43 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Tech-inspired gradient background */}
-      <div className="absolute inset-0 bg-gradient-hero" />
-      <div className="absolute inset-0 grid-pattern opacity-40" />
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-ivory via-background to-muted/30">
+      {/* Organic decorative elements */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-gentle-float" />
+      <div className="absolute bottom-32 left-10 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-gentle-float" style={{ animationDelay: '2s' }} />
       
-      {/* Geometric tech elements */}
-      <div className="absolute top-20 left-10 w-40 h-40 bg-primary/15 rounded-full blur-3xl animate-float glow-primary" />
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-coral/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-accent/10 rounded-full blur-3xl animate-float glow-accent" style={{ animationDelay: '4s' }} />
-      
-      {/* Tech accent lines */}
-      <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent" />
-      <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Split-screen layout */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Split-screen creative layout */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             
-            {/* Left side - Content */}
-            <div className="space-y-8 animate-slide-in-left">
-              {/* Tech status badge */}
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-surface/90 backdrop-blur-md rounded-full border border-primary/40 hover:border-primary/60 transition-all duration-300 glow-primary">
+            {/* Left side - Content with asymmetric design */}
+            <div className="space-y-10 animate-soft-fade-in order-2 lg:order-1">
+              {/* Elegant availability badge */}
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-card rounded-full border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover-soft shadow-soft">
                 <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-coral opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-coral"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                 </div>
                 <span className="text-sm font-medium text-foreground">Available for opportunities</span>
               </div>
 
-              {/* Main heading with tech styling */}
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-display text-foreground leading-[1.1] tracking-tight">
-                  Divya
-                  <span className="block text-transparent bg-clip-text bg-gradient-primary mt-2 animate-pulse-glow">
+              {/* Main heading with creative typography */}
+              <div className="space-y-6">
+                <div>
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold font-display text-foreground leading-[1.05] tracking-tight">
+                    Divya
+                  </h1>
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold font-display text-primary leading-[1.05] tracking-tight mt-1">
                     Sharma
-                  </span>
-                </h1>
-                <h2 className="text-2xl md:text-3xl text-accent font-semibold font-display tracking-wide">
-                  Impact-Driven Product Manager
-                </h2>
+                  </h1>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="h-1 w-16 bg-gradient-primary rounded-full" />
+                  <h2 className="text-2xl md:text-3xl font-display font-medium text-foreground/80">
+                    Impact-Driven Product Manager
+                  </h2>
+                </div>
               </div>
 
               {/* Description */}
@@ -53,17 +49,17 @@ const HeroSection = () => {
                 that drive business growth and user delight.
               </p>
 
-              {/* Tech-styled CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a href="/Divya_Sharma_Product_Resume.pdf" download="Divya_Sharma_Product_Resume.pdf">
-                  <Button size="lg" variant="coral" className="group text-base font-semibold hover-tech">
+                  <Button size="lg" className="group text-base font-semibold shadow-soft hover:shadow-elegant transition-all">
                     <Download className="h-5 w-5 group-hover:animate-bounce" />
                     Download Resume
                   </Button>
                 </a>
                 
                 <a href="https://www.linkedin.com/in/divya234/" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="group text-base font-semibold border-2 hover-tech">
+                  <Button variant="outline" size="lg" className="group text-base font-semibold border-2 border-primary/30 hover:border-primary hover:bg-primary/5 transition-all">
                     <Linkedin className="h-5 w-5" />
                     Let's Connect
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -72,43 +68,35 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right side - Tech-inspired visual with profile */}
-            <div className="relative animate-slide-in-right lg:pl-12">
-              {/* Tech decorative frame */}
+            {/* Right side - Creative asymmetric visual */}
+            <div className="relative animate-soft-fade-in order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
               <div className="relative">
-                {/* Tech geometric shapes */}
-                <div className="absolute -top-8 -right-8 w-72 h-72 bg-gradient-primary opacity-20 rounded-3xl rotate-12 blur-2xl glow-primary" />
-                <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-accent opacity-20 rounded-3xl -rotate-12 blur-2xl glow-accent" />
+                {/* Decorative organic shapes */}
+                <div className="absolute -top-12 -right-12 w-80 h-80 bg-gradient-primary opacity-15 rounded-[40%_60%_70%_30%/60%_30%_70%_40%] blur-2xl animate-gentle-float" />
+                <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-gradient-accent opacity-20 rounded-[60%_40%_30%_70%/40%_60%_30%_70%] blur-2xl animate-gentle-float" style={{ animationDelay: '1.5s' }} />
                 
-                {/* Grid overlay for tech feel */}
-                <div className="absolute inset-0 grid-pattern-dense opacity-20" />
-                
-                {/* Profile image container with tech accents */}
-                <div className="relative z-10 aspect-square max-w-md mx-auto">
-                  <div className="absolute inset-0 bg-gradient-coral rounded-3xl rotate-6 opacity-30 animate-float" />
-                  <div className="absolute inset-0 bg-gradient-primary rounded-3xl -rotate-3 opacity-20 animate-float glow-primary" style={{ animationDelay: '1s' }} />
+                {/* Profile image with creative framing */}
+                <div className="relative z-10 aspect-square max-w-lg mx-auto">
+                  <div className="absolute -top-6 -left-6 w-full h-full border-2 border-primary/30 rounded-[30px]" />
+                  <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-secondary/30 rounded-[30px]" />
                   
-                  {/* Tech corner accents */}
-                  <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-primary rounded-tl-3xl" />
-                  <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-accent rounded-br-3xl" />
-                  
-                  <div className="relative bg-surface/60 backdrop-blur-md rounded-3xl p-2 border-2 border-primary/40 hover:border-primary/70 transition-all duration-500 hover:scale-105 hover-lift">
+                  <div className="relative bg-card rounded-[30px] p-3 shadow-elegant hover:shadow-lift transition-all duration-500 hover-lift">
                     <img 
                       src={profilePhoto} 
                       alt="Divya Sharma - Product Manager" 
-                      className="w-full h-full object-cover rounded-2xl shadow-elegant"
+                      className="w-full h-full object-cover rounded-[24px]"
                     />
                   </div>
                 </div>
 
-                {/* Tech-styled floating stat badges */}
-                <div className="absolute -left-4 top-1/4 bg-surface/95 backdrop-blur-md rounded-2xl p-5 border-2 border-accent/40 shadow-accent animate-float hover-tech glow-accent">
-                  <div className="text-3xl font-bold font-display text-accent">4+</div>
+                {/* Floating stat cards with asymmetric placement */}
+                <div className="absolute -left-8 top-1/4 bg-card rounded-2xl p-6 border-2 border-primary/20 shadow-soft hover:shadow-elegant animate-gentle-float hover-lift">
+                  <div className="text-4xl font-bold font-display text-primary mb-1">4+</div>
                   <div className="text-xs text-muted-foreground font-medium whitespace-nowrap">Years Experience</div>
                 </div>
 
-                <div className="absolute -right-4 bottom-1/4 bg-surface/95 backdrop-blur-md rounded-2xl p-5 border-2 border-coral/40 shadow-coral animate-float hover-tech" style={{ animationDelay: '1.5s' }}>
-                  <div className="text-3xl font-bold font-display text-coral">20+</div>
+                <div className="absolute -right-8 bottom-1/3 bg-card rounded-2xl p-6 border-2 border-secondary/20 shadow-blush hover:shadow-elegant animate-gentle-float hover-lift" style={{ animationDelay: '1s' }}>
+                  <div className="text-4xl font-bold font-display text-secondary mb-1">20+</div>
                   <div className="text-xs text-muted-foreground font-medium whitespace-nowrap">Features Launched</div>
                 </div>
               </div>
@@ -119,11 +107,11 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-muted-foreground">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-primary/50 rounded-full p-1">
-            <div className="w-1 h-3 bg-coral rounded-full mx-auto animate-pulse" />
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center gap-3">
+          <span className="text-xs text-muted-foreground font-medium">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-primary/40 rounded-full p-1">
+            <div className="w-1 h-3 bg-primary rounded-full mx-auto animate-pulse" />
           </div>
         </div>
       </div>
