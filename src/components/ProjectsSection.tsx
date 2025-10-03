@@ -31,24 +31,23 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-background-light relative overflow-hidden">
-      {/* Tech decorative elements */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
-      <div className="absolute top-0 left-0 w-96 h-96 bg-coral/10 rounded-full blur-3xl glow-accent" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl glow-accent" />
+    <section id="projects" className="py-24 bg-background relative overflow-hidden">
+      {/* Soft decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="mb-16 animate-fade-in">
-            <Badge variant="outline" className="mb-4 border-coral/50 text-coral bg-coral/5 px-5 py-1.5 font-medium">
+          <div className="mb-16 animate-soft-fade-in">
+            <Badge variant="outline" className="mb-4 border-primary/40 text-primary px-4 py-1.5">
               Featured Projects
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground-dark mb-6 max-w-3xl tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold font-display text-foreground mb-6 max-w-3xl">
               Projects That Shaped My{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-coral">Product Skills</span>
+              <span className="text-secondary">Product Skills</span>
             </h2>
-            <p className="text-lg text-foreground-dark/70 max-w-2xl">
+            <p className="text-lg text-muted-foreground max-w-2xl">
               A showcase of successful product launches, strategic initiatives, and 
               technical solutions that delivered measurable business impact.
             </p>
@@ -64,11 +63,11 @@ const ProjectsSection = () => {
               >
                 {/* Project Preview - Alternates sides */}
                 <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} relative group`}>
-                  <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-primary/30 hover:border-primary/60 transition-all duration-500 shadow-elegant hover:shadow-tech hover-tech">
-                    {/* Tech corner accent */}
-                    <div className={`absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-24 h-24 ${
-                      index % 2 === 0 ? 'bg-gradient-coral' : 'bg-gradient-accent'
-                    } opacity-20 blur-2xl`} />
+                  <div className="relative aspect-video rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift">
+                    {/* Soft corner accent */}
+                    <div className={`absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-32 h-32 ${
+                      index % 2 === 0 ? 'bg-primary/20' : 'bg-secondary/20'
+                    } blur-3xl`} />
                     
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
@@ -90,51 +89,45 @@ const ProjectsSection = () => {
 
                 {/* Project Details - Alternates sides */}
                 <div className={`${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'} space-y-6`}>
-                  <Card className="border-2 border-primary/20 bg-surface-light hover:shadow-tech hover:border-primary/40 transition-all duration-500 hover-tech">
-                    <CardContent className="p-8">
-                      {/* Title with tech accent */}
-                      <div className="mb-4">
-                        <div className="inline-flex items-center gap-3 mb-3">
-                          <div className={`h-1 w-8 ${
-                            index % 2 === 0 ? 'bg-gradient-coral' : 'bg-gradient-accent'
-                          } rounded-full`} />
-                          <Badge variant="outline" className="border-primary/40 text-primary bg-primary/5 text-xs font-medium">
-                            Case Study
+                  <div className="space-y-6">
+                    <div>
+                      <div className="inline-flex items-center gap-3 mb-3">
+                        <div className={`h-1 w-12 ${
+                          index % 2 === 0 ? 'bg-gradient-primary' : 'bg-gradient-accent'
+                        } rounded-full`} />
+                        <Badge variant="outline" className="border-primary/40 text-primary text-xs">
+                          Case Study
+                        </Badge>
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-4 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
+                    
+                    {/* Description */}
+                    <p className="text-muted-foreground mb-6 leading-relaxed text-base">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div>
+                      <h4 className="text-sm font-semibold font-display text-foreground mb-3 flex items-center gap-2">
+                        <div className="w-2 h-2 bg-secondary rounded-full" />
+                        Key Skills Applied
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <Badge 
+                            key={techIndex}
+                            variant="outline"
+                            className="border-secondary/40 hover:bg-secondary/10 hover:scale-105 transition-all"
+                          >
+                            {tech}
                           </Badge>
-                        </div>
-                        <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground-dark group-hover:text-primary transition-colors">
-                          {project.title}
-                        </h3>
+                        ))}
                       </div>
-                      
-                      {/* Description */}
-                      <p className="text-foreground-dark/70 mb-6 leading-relaxed text-base">
-                        {project.description}
-                      </p>
-
-                      {/* Technologies */}
-                      <div>
-                        <h4 className="text-sm font-semibold font-display text-foreground-dark mb-3 flex items-center gap-2">
-                          <div className="w-2 h-2 bg-accent rounded-full" />
-                          Key Skills Applied
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <Badge 
-                              key={techIndex}
-                              variant="outline"
-                              className="border-accent/40 bg-accent/5 text-accent-foreground hover:bg-accent/20 hover:scale-105 transition-all font-medium"
-                            >
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Decorative line */}
-                      <div className="mt-6 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

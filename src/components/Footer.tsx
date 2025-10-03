@@ -7,12 +7,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-background border-t-2 border-primary/20 relative overflow-hidden">
-      {/* Tech accent line at top */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-      
-      {/* Decorative glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-primary/10 rounded-full blur-3xl" />
+    <footer className="bg-background border-t border-border/30 relative overflow-hidden">
+      {/* Soft decorative glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-primary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-6 py-12 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
@@ -31,7 +28,7 @@ const Footer = () => {
             variant="outline"
             size="sm"
             onClick={scrollToTop}
-            className="border-2 border-primary/40 hover:bg-primary/10 hover:border-primary transition-all duration-300 hover-tech group"
+            className="border-primary/40 hover:bg-primary/10 transition-all duration-300 hover-soft group"
           >
             <ArrowUp className="h-4 w-4 mr-2 group-hover:-translate-y-1 transition-transform" />
             Back to Top
@@ -44,7 +41,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Divya Sharma. All rights reserved. 
             <span className="block mt-2 flex items-center justify-center gap-2">
               <span>Crafted with</span>
-              <span className="text-coral animate-pulse">♥</span>
+              <span className="text-primary animate-pulse">♥</span>
               <span>& modern tech</span>
             </span>
           </p>
