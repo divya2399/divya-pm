@@ -45,15 +45,15 @@ const AboutSection = () => {
             </h2>
           </div>
 
-          {/* Asymmetric Layout */}
-          <div className="grid lg:grid-cols-12 gap-10 mb-16">
+          {/* Asymmetric Layout - No boxes */}
+          <div className="grid lg:grid-cols-12 gap-16 mb-20">
             {/* Bio - Takes more space */}
-            <div className="lg:col-span-7 space-y-6 animate-slide-in-soft">
-              <div className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift">
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+            <div className="lg:col-span-7 space-y-8 animate-slide-in-soft">
+              <div className="space-y-6">
+                <p className="text-lg text-foreground leading-relaxed">
                   Drawing on over 4 years of experience across SaaS and BioTech industries, I bridge business challenges and technology to deliver results. I work consistently towards efficiency and driving value for users and organizations alike.
                 </p>
-                <p className="text-lg text-foreground leading-relaxed mb-6">
+                <p className="text-lg text-foreground leading-relaxed">
                   I started my career curious about how technology could transform the way we work, gaining experience in both BioTech and SaaS. Along the way, I saw how the right solutions can simplify complexity and deliver real impact.
                 </p>
                 <p className="text-lg text-foreground leading-relaxed">
@@ -61,43 +61,41 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              <p className="text-xl text-muted-foreground leading-relaxed pl-8 border-l-4 border-secondary italic font-accent">
-                Today, I bring a data-driven, agile, and collaborative approach to product management, always focused on uncovering user pain points and shaping them into scalable solutions that spark innovation.
-              </p>
+              <div className="pl-6 border-l-3 border-secondary/40">
+                <p className="text-xl text-foreground/80 leading-relaxed italic font-accent">
+                  Today, I bring a data-driven, agile, and collaborative approach to product management, always focused on uncovering user pain points and shaping them into scalable solutions that spark innovation.
+                </p>
+              </div>
             </div>
 
-            {/* Highlights - Staggered cards */}
-            <div className="lg:col-span-5 space-y-4 animate-slide-in-soft">
+            {/* Highlights - Open layout */}
+            <div className="lg:col-span-5 space-y-8 animate-slide-in-soft">
               {highlights.map((highlight, index) => (
-                <Card 
+                <div 
                   key={index}
-                  className={`bg-card hover:shadow-soft transition-all duration-500 hover-lift ${
-                    index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-6'
-                  }`}
+                  className={`${index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-8'} transition-all`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-primary/10 rounded-xl hover:scale-110 transition-transform">
-                        <highlight.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold font-display text-foreground mb-2 text-base">
-                          {highlight.title}
-                        </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {highlight.description}
-                        </p>
-                      </div>
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-xl hover:scale-110 transition-transform">
+                      <highlight.icon className="h-6 w-6 text-primary" />
                     </div>
-                  </CardContent>
-                </Card>
+                    <div className="flex-1">
+                      <h3 className="font-bold font-display text-foreground mb-2 text-base">
+                        {highlight.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {highlight.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Stats - Clean grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-expand-in">
+          {/* Stats - Simple list style */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 animate-expand-in">
             {[
               { number: "4", label: "Years Experience", color: "primary" },
               { number: "2", label: "Degrees", color: "secondary" },
@@ -106,14 +104,14 @@ const AboutSection = () => {
             ].map((stat, index) => (
               <div 
                 key={index} 
-                className="text-center p-6 bg-card rounded-2xl hover:shadow-soft transition-all duration-500 hover-lift group"
+                className="text-center group"
               >
-                <div className={`text-4xl md:text-5xl font-bold font-display ${
+                <div className={`text-5xl md:text-6xl font-bold font-display ${
                   stat.color === 'primary' ? 'text-primary' : 'text-secondary'
-                } mb-2 group-hover:scale-110 transition-transform`}>
+                } mb-3 group-hover:scale-110 transition-transform`}>
                   {stat.number}
                 </div>
-                <div className="text-sm text-muted-foreground font-medium">
+                <div className="text-sm text-muted-foreground font-medium uppercase tracking-wide">
                   {stat.label}
                 </div>
               </div>

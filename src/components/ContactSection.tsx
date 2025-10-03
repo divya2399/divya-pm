@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
@@ -96,85 +95,83 @@ const ContactSection = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="bg-card hover:shadow-soft transition-all duration-500 animate-slide-in-soft">
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 bg-primary/10 rounded-xl">
-                    <MessageCircle className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-semibold font-display text-foreground">
-                    Send a Message
-                  </h3>
+            <div className="animate-slide-in-soft">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-primary/10 rounded-xl">
+                  <MessageCircle className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-semibold font-display text-foreground">
+                  Send a Message
+                </h3>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    placeholder="Your full name"
+                    className="bg-background border focus:border-primary transition-colors"
+                  />
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Your full name"
-                      className="bg-background border focus:border-primary transition-colors"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="your.email@example.com"
+                    className="bg-background border focus:border-primary transition-colors"
+                  />
+                </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="your.email@example.com"
-                      className="bg-background border focus:border-primary transition-colors"
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Message
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell me about your project, question, or just say hello!"
+                    rows={6}
+                    className="bg-background border focus:border-primary resize-none transition-colors"
+                  />
+                </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me about your project, question, or just say hello!"
-                      rows={6}
-                      className="bg-background border focus:border-primary resize-none transition-colors"
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    size="lg"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-primary hover:shadow-blush transition-all duration-300 hover-soft group"
-                  >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        <Send className="mr-2 h-5 w-5" />
-                        Send Message
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-primary hover:shadow-blush transition-all duration-300 hover-soft group"
+                >
+                  {isSubmitting ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-5 w-5" />
+                      Send Message
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </>
+                  )}
+                </Button>
+              </form>
+            </div>
 
             {/* Contact Methods */}
             <div className="space-y-6 animate-slide-in-soft">
@@ -190,74 +187,70 @@ const ContactSection = () => {
 
               <div className="space-y-4">
                 {contactMethods.map((method, index) => (
-                  <Card 
+                  <div 
                     key={index}
-                    className="bg-card hover:shadow-soft transition-all duration-500 group cursor-pointer hover-lift"
+                    className="p-6 border border-border/40 rounded-2xl hover:border-primary/40 transition-all duration-500 group cursor-pointer"
                   >
-                    <CardContent className="p-6">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className={`p-3 rounded-xl group-hover:scale-110 transition-all ${
-                            method.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                          }`}>
-                            <method.icon className={`h-6 w-6 ${
-                              method.color === 'primary' ? 'text-primary' : 'text-secondary'
-                            }`} />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold font-display text-foreground mb-1">
-                              {method.title}
-                            </h4>
-                            <p className={`text-sm mb-1 font-medium ${
-                              method.color === 'primary' ? 'text-primary' : 'text-secondary'
-                            }`}>
-                              {method.value}
-                            </p>
-                            <p className="text-xs text-muted-foreground">
-                              {method.description}
-                            </p>
-                          </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className={`p-3 rounded-xl group-hover:scale-110 transition-all ${
+                          method.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                        }`}>
+                          <method.icon className={`h-6 w-6 ${
+                            method.color === 'primary' ? 'text-primary' : 'text-secondary'
+                          }`} />
                         </div>
-                        <Button 
-                          variant="outline" 
-                          size="sm"
-                          className="border-primary/40 hover:bg-primary/10 transition-all duration-300 group-hover:scale-105"
-                        >
-                          {method.action}
-                        </Button>
+                        <div>
+                          <h4 className="font-semibold font-display text-foreground mb-1">
+                            {method.title}
+                          </h4>
+                          <p className={`text-sm mb-1 font-medium ${
+                            method.color === 'primary' ? 'text-primary' : 'text-secondary'
+                          }`}>
+                            {method.value}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {method.description}
+                          </p>
+                        </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                      <Button 
+                        variant="outline" 
+                        size="sm"
+                        className="border-primary/40 hover:bg-primary/10 transition-all duration-300 group-hover:scale-105"
+                      >
+                        {method.action}
+                      </Button>
+                    </div>
+                  </div>
                 ))}
               </div>
 
               {/* Location & Availability */}
-              <Card className="bg-card">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold font-display text-foreground mb-4 flex items-center gap-2">
-                    <MapPin className="h-5 w-5 text-secondary" />
-                    Location & Availability
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Location:</span>
-                      <span className="text-foreground font-medium">New York City, NY</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Timezone:</span>
-                      <span className="text-foreground font-medium">EDT (GMT-4)</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Availability:</span>
-                      <span className="text-secondary font-medium">Open to opportunities</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Response Time:</span>
-                      <span className="text-foreground font-medium">Within 24 hours</span>
-                    </div>
+              <div className="p-6 border border-border/40 rounded-2xl">
+                <h4 className="font-semibold font-display text-foreground mb-4 flex items-center gap-2">
+                  <MapPin className="h-5 w-5 text-secondary" />
+                  Location & Availability
+                </h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Location:</span>
+                    <span className="text-foreground font-medium">New York City, NY</span>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Timezone:</span>
+                    <span className="text-foreground font-medium">EDT (GMT-4)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Availability:</span>
+                    <span className="text-secondary font-medium">Open to opportunities</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Response Time:</span>
+                    <span className="text-foreground font-medium">Within 24 hours</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

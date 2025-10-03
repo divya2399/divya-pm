@@ -66,31 +66,29 @@ const ExperienceSection = () => {
             </p>
           </div>
 
-          {/* Timeline with alternating layout */}
+          {/* Timeline with alternating layout - No boxes */}
           <div className="relative">
             {/* Delicate timeline line */}
             <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-primary/30 transform -translate-x-1/2 opacity-40" />
 
-            <div className="space-y-12">
+            <div className="space-y-20">
               {experiences.map((exp, index) => (
                 <div 
                   key={index}
                   className={`relative animate-soft-fade-in ${
-                    index % 2 === 0 ? 'lg:pr-1/2 lg:text-right' : 'lg:pl-1/2 lg:ml-auto'
+                    index % 2 === 0 ? 'lg:pr-1/2' : 'lg:pl-1/2 lg:ml-auto'
                   }`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   {/* Timeline node */}
                   <div className="hidden lg:block absolute top-8 left-1/2 w-5 h-5 rounded-full border-4 border-background bg-primary transform -translate-x-1/2 shadow-soft z-10" />
 
-                  <Card className={`bg-card hover:shadow-elegant transition-all duration-500 hover-lift lg:w-11/12 group ${
-                    index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-auto'
-                  }`}>
-                    <CardContent className="p-8">
+                  <div className={`lg:w-11/12 group ${index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-auto'}`}>
+                    <div className="space-y-6">
                       {/* Header */}
-                      <div className="mb-6">
+                      <div>
                         <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-2xl font-bold font-display text-foreground">
+                          <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground">
                             {exp.role}
                           </h3>
                           <Badge variant="secondary" className="font-medium">
@@ -109,7 +107,7 @@ const ExperienceSection = () => {
                       </div>
 
                       {/* Achievements */}
-                      <div className="mb-6">
+                      <div>
                         <h5 className="font-bold text-foreground mb-4 flex items-center gap-2 text-base font-display">
                           <Award className="h-5 w-5 text-secondary" />
                           Key Achievements
@@ -142,8 +140,13 @@ const ExperienceSection = () => {
                           ))}
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+
+                      {/* Decorative line */}
+                      <div className={`h-1 w-20 rounded-full ${
+                        index % 2 === 0 ? 'bg-gradient-primary' : 'bg-gradient-accent'
+                      }`} />
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

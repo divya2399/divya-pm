@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { 
   Dog, 
   CookingPot, 
@@ -70,19 +69,19 @@ const BeyondWorkSection = () => {
             </p>
           </div>
 
-          {/* Main Interests - Asymmetric, softer design */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Main Interests - Open layout */}
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 mb-20">
             {interests.map((interest, index) => (
-              <Card 
+              <div 
                 key={index}
-                className={`bg-card hover:shadow-elegant transition-all duration-500 hover-lift animate-expand-in ${
-                  index === 2 ? 'md:translate-y-6' : ''
+                className={`animate-expand-in ${
+                  index === 2 ? 'md:translate-y-8' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`p-4 rounded-2xl group-hover:scale-110 transition-all ${
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className={`p-4 rounded-2xl hover:scale-110 transition-all ${
                       interest.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
                     }`}>
                       <interest.icon className={`h-7 w-7 ${
@@ -100,84 +99,68 @@ const BeyondWorkSection = () => {
                   </div>
                   
                   {/* Playful accent line */}
-                  <div className={`h-1 w-16 rounded-full ${
+                  <div className={`h-1 w-16 rounded-full ml-16 ${
                     interest.color === 'secondary' ? 'bg-gradient-accent' : 'bg-gradient-primary'
                   }`} />
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
 
-          {/* Fun Facts - Playful layout */}
-          <div className="mb-16 animate-soft-fade-in">
-            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-10 text-center">
+          {/* Fun Facts - Simple grid */}
+          <div className="mb-20 animate-soft-fade-in">
+            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-12 text-center">
               Quick Facts About Me
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
               {funFacts.map((fact, index) => (
                 <div
                   key={index}
-                  className="group animate-expand-in"
+                  className="group animate-expand-in text-center"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
-                  <Card 
-                    className={`bg-card hover:shadow-soft transition-all duration-500 hover-lift h-full ${
-                      fact.color === 'primary' ? 'hover:bg-primary/5' : 'hover:bg-secondary/5'
-                    }`}
-                  >
-                    <CardContent className="p-6 text-center flex flex-col items-center h-full">
-                      <div className={`p-4 rounded-2xl mb-4 group-hover:scale-110 transition-all duration-300 ${
-                        fact.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                      }`}>
-                        <fact.icon className={`h-8 w-8 ${
-                          fact.color === 'primary' ? 'text-primary' : 'text-secondary'
-                        }`} />
-                      </div>
-                      <h4 className="font-bold font-display text-foreground mb-2 text-base">
-                        {fact.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {fact.description}
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <div className={`inline-block p-4 rounded-2xl mb-4 group-hover:scale-110 transition-all duration-300 ${
+                    fact.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                  }`}>
+                    <fact.icon className={`h-8 w-8 ${
+                      fact.color === 'primary' ? 'text-primary' : 'text-secondary'
+                    }`} />
+                  </div>
+                  <h4 className="font-bold font-display text-foreground mb-2 text-base">
+                    {fact.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {fact.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Personal Philosophy - Softer, more human */}
-          <div className="relative animate-expand-in">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-3xl blur-xl" />
-            
-            <Card className="relative bg-card/90 backdrop-blur-sm overflow-hidden shadow-elegant">
-              {/* Decorative soft accents */}
-              <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-primary opacity-10 blur-3xl" />
-              <div className="absolute bottom-0 right-0 w-48 h-48 bg-gradient-accent opacity-10 blur-3xl" />
+          {/* Personal Philosophy - Open quote style */}
+          <div className="relative animate-expand-in max-w-4xl mx-auto">
+            <div className="text-center py-10">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="h-1 w-12 bg-gradient-primary rounded-full" />
+                <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground">
+                  Personal Philosophy
+                </h3>
+                <div className="h-1 w-12 bg-gradient-accent rounded-full" />
+              </div>
               
-              <CardContent className="p-10 md:p-12 text-center relative z-10">
-                <div className="inline-flex items-center gap-2 mb-6">
-                  <div className="h-1 w-12 bg-gradient-primary rounded-full" />
-                  <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground">
-                    Personal Philosophy
-                  </h3>
-                  <div className="h-1 w-12 bg-gradient-accent rounded-full" />
-                </div>
-                
-                <p className="text-xl md:text-2xl text-foreground max-w-4xl mx-auto leading-relaxed font-light italic font-accent">
-                  "For me, it's always been about finding clarity in the chaos—taking something messy or complex and shaping it into something people can actually connect with and use. 
-                  I lean on curiosity to uncover what really matters and empathy to make sure the outcome speaks to people, not just processes."
-                </p>
+              <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light italic font-accent">
+                "For me, it's always been about finding clarity in the chaos—taking something messy or complex and shaping it into something people can actually connect with and use. 
+                I lean on curiosity to uncover what really matters and empathy to make sure the outcome speaks to people, not just processes."
+              </p>
 
-                {/* Playful decorative dots */}
-                <div className="flex justify-center gap-3 mt-8">
-                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
-                  <div className="w-3 h-3 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '0.2s' }} />
-                  <div className="w-3 h-3 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.4s' }} />
-                </div>
-              </CardContent>
-            </Card>
+              {/* Playful decorative dots */}
+              <div className="flex justify-center gap-3 mt-8">
+                <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
+                <div className="w-3 h-3 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '0.2s' }} />
+                <div className="w-3 h-3 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.4s' }} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

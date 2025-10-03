@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { Code, BarChart3, Users, Palette, Cpu, Globe, Target, Sparkles } from "lucide-react";
 
 const SkillsSection = () => {
@@ -60,18 +59,18 @@ const SkillsSection = () => {
             </p>
           </div>
 
-          {/* Skill Categories - Clean cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Skill Categories - Open layout */}
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-12 mb-20">
             {skillCategories.map((category, index) => (
-              <Card 
+              <div 
                 key={index} 
-                className={`bg-card hover:shadow-soft transition-all duration-500 hover-lift animate-expand-in group ${
-                  index === 2 ? 'md:translate-y-6' : ''
+                className={`animate-expand-in group ${
+                  index === 2 ? 'md:translate-y-8' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-4 mb-6">
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
                     <div className={`p-4 rounded-2xl transition-all duration-300 group-hover:scale-110 ${
                       category.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
                     }`}>
@@ -84,7 +83,7 @@ const SkillsSection = () => {
                     </h3>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 pl-2">
                     {category.skills.map((skill, skillIndex) => (
                       <Badge 
                         key={skillIndex} 
@@ -101,58 +100,45 @@ const SkillsSection = () => {
                   </div>
 
                   {/* Accent line */}
-                  <div className={`mt-6 h-1 w-16 rounded-full ${
+                  <div className={`h-1 w-16 rounded-full ${
                     category.color === 'secondary' ? 'bg-gradient-accent' : 'bg-gradient-primary'
                   }`} />
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
 
-          {/* Proficiency Indicators - Clean circular cards */}
+          {/* Proficiency Indicators - Simple layout */}
           <div className="animate-soft-fade-in">
-            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-10 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-12 text-center">
               Proficiency Levels
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
               {proficiencies.map((item, index) => (
                 <div 
                   key={index} 
-                  className="group animate-expand-in"
+                  className="group animate-expand-in text-center"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
-                  <Card className={`bg-card hover:shadow-soft transition-all duration-500 hover-lift ${
-                    item.color === 'primary' 
-                      ? 'hover:bg-primary/5' 
-                      : 'hover:bg-secondary/5'
-                  }`}>
-                    <CardContent className="p-8 text-center">
-                      <div className="relative inline-block mb-4">
-                        {/* Soft glow */}
-                        <div className={`absolute inset-0 rounded-full blur-xl group-hover:blur-2xl transition-all ${
-                          item.color === 'primary' ? 'bg-primary/20' : 'bg-secondary/20'
-                        }`} />
-                        
-                        <div className={`relative p-5 rounded-full group-hover:scale-110 transition-all duration-300 ${
-                          item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                        }`}>
-                          <item.icon className={`h-10 w-10 ${
-                            item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                          }`} />
-                        </div>
-                      </div>
-                      
-                      <h4 className="font-bold font-display text-foreground mb-2 text-lg">
-                        {item.label}
-                      </h4>
-                      <p className={`text-sm font-medium ${
+                  <div className="inline-block mb-4">
+                    <div className={`p-5 rounded-full group-hover:scale-110 transition-all duration-300 ${
+                      item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                    }`}>
+                      <item.icon className={`h-10 w-10 ${
                         item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                      }`}>
-                        {item.level}
-                      </p>
-                    </CardContent>
-                  </Card>
+                      }`} />
+                    </div>
+                  </div>
+                  
+                  <h4 className="font-bold font-display text-foreground mb-2 text-lg">
+                    {item.label}
+                  </h4>
+                  <p className={`text-sm font-medium ${
+                    item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                  }`}>
+                    {item.level}
+                  </p>
                 </div>
               ))}
             </div>
