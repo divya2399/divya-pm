@@ -27,7 +27,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background relative overflow-hidden">
+    <section id="about" className="py-24 bg-background relative overflow-hidden grid-pattern">
       {/* Soft decorative elements */}
       <div className="absolute top-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-primary/15 rounded-full blur-3xl" />

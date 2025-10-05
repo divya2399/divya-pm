@@ -4,100 +4,81 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-ivory via-background to-muted/30">
-      {/* Organic decorative elements */}
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-gentle-float" />
-      <div className="absolute bottom-32 left-10 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-gentle-float" style={{ animationDelay: '2s' }} />
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+      {/* Large organic blob shapes inspired by reference */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-[60%_40%_30%_70%/40%_60%_30%_70%] blur-2xl animate-gentle-float" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/25 rounded-[40%_60%_70%_30%/60%_30%_70%_40%] blur-2xl animate-gentle-float" style={{ animationDelay: '3s' }} />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Split-screen creative layout */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             
-            {/* Left side - Content with asymmetric design */}
+            {/* Left side - Bold typography and content */}
             <div className="space-y-10 animate-soft-fade-in order-2 lg:order-1">
-              {/* Elegant availability badge */}
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-card rounded-full border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover-soft shadow-soft">
-                <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                </div>
-                <span className="text-sm font-medium text-foreground">Available for opportunities</span>
-              </div>
-
-              {/* Main heading with creative typography */}
-              <div className="space-y-6">
-                <div>
-                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold font-display text-foreground leading-[1.05] tracking-tight">
-                    Divya
-                  </h1>
-                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold font-display text-primary leading-[1.05] tracking-tight mt-1">
-                    Sharma
-                  </h1>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="h-1 w-16 bg-gradient-primary rounded-full" />
-                  <h2 className="text-2xl md:text-3xl font-display font-medium text-foreground/80">
-                    Impact-Driven Product Manager
-                  </h2>
+              {/* Main heading - Bold and creative */}
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display text-foreground leading-[1.1] tracking-tight">
+                  I AM A CREATIVE
+                </h1>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display text-foreground leading-[1.1] tracking-tight">
+                  PRODUCT MANAGER
+                </h1>
+                
+                <div className="pt-4 max-w-lg">
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Hi there! I'm Divya Sharma. As a product manager, I understand the importance of 
+                    creating user-friendly solutions that drive real impact for businesses and their users.
+                  </p>
                 </div>
               </div>
-
-              {/* Description */}
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Transforming complex technical challenges into intuitive user experiences 
-                that drive business growth and user delight.
-              </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="/Divya_Sharma_Product_Resume.pdf" download="Divya_Sharma_Product_Resume.pdf">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <a href="#contact">
                   <Button size="lg" className="group text-base font-semibold shadow-soft hover:shadow-elegant transition-all">
-                    <Download className="h-5 w-5 group-hover:animate-bounce" />
-                    Download Resume
+                    Hire Me
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/divya234/" target="_blank" rel="noopener noreferrer">
+                <a href="/Divya_Sharma_Product_Resume.pdf" download="Divya_Sharma_Product_Resume.pdf">
                   <Button variant="outline" size="lg" className="group text-base font-semibold border-2 border-primary/30 hover:border-primary hover:bg-primary/5 transition-all">
-                    <Linkedin className="h-5 w-5" />
-                    Let's Connect
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <Download className="h-5 w-5" />
+                    Portfolio
                   </Button>
                 </a>
               </div>
             </div>
 
-            {/* Right side - Creative asymmetric visual */}
+            {/* Right side - Profile with organic shape background */}
             <div className="relative animate-soft-fade-in order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
-              <div className="relative">
-                {/* Decorative organic shapes */}
-                <div className="absolute -top-12 -right-12 w-80 h-80 bg-gradient-primary opacity-15 rounded-[40%_60%_70%_30%/60%_30%_70%_40%] blur-2xl animate-gentle-float" />
-                <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-gradient-accent opacity-20 rounded-[60%_40%_30%_70%/40%_60%_30%_70%] blur-2xl animate-gentle-float" style={{ animationDelay: '1.5s' }} />
+              <div className="relative max-w-lg mx-auto">
+                {/* Large organic blob behind image - inspired by reference */}
+                <div className="absolute inset-0 -top-20 -right-20 -bottom-20 -left-20">
+                  <div className="w-full h-full bg-primary/30 rounded-[60%_40%_30%_70%/40%_60%_30%_70%] animate-gentle-float" />
+                </div>
                 
-                {/* Profile image with creative framing */}
-                <div className="relative z-10 aspect-square max-w-lg mx-auto">
-                  <div className="absolute -top-6 -left-6 w-full h-full border-2 border-primary/30 rounded-[30px]" />
-                  <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-secondary/30 rounded-[30px]" />
-                  
-                  <div className="relative bg-card rounded-[30px] p-3 shadow-elegant hover:shadow-lift transition-all duration-500 hover-lift">
-                    <img 
-                      src={profilePhoto} 
-                      alt="Divya Sharma - Product Manager" 
-                      className="w-full h-full object-cover rounded-[24px]"
-                    />
+                {/* Profile image with subtle border */}
+                <div className="relative z-10 rounded-[40px] overflow-hidden border-4 border-card shadow-elegant hover:shadow-lift transition-all duration-500">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Divya Sharma - Product Manager" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+
+                {/* Social icons - simple and clean */}
+                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 z-20">
+                  <div className="flex items-center gap-4 bg-card px-8 py-4 rounded-full shadow-elegant border-2 border-primary/20">
+                    <a 
+                      href="https://www.linkedin.com/in/divya234/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2 hover:bg-primary/10 rounded-full transition-colors"
+                    >
+                      <Linkedin className="h-5 w-5 text-foreground hover:text-primary transition-colors" />
+                    </a>
                   </div>
-                </div>
-
-                {/* Floating stat cards with asymmetric placement */}
-                <div className="absolute -left-8 top-1/4 bg-card rounded-2xl p-6 border-2 border-primary/20 shadow-soft hover:shadow-elegant animate-gentle-float hover-lift">
-                  <div className="text-4xl font-bold font-display text-primary mb-1">4+</div>
-                  <div className="text-xs text-muted-foreground font-medium whitespace-nowrap">Years Experience</div>
-                </div>
-
-                <div className="absolute -right-8 bottom-1/3 bg-card rounded-2xl p-6 border-2 border-secondary/20 shadow-blush hover:shadow-elegant animate-gentle-float hover-lift" style={{ animationDelay: '1s' }}>
-                  <div className="text-4xl font-bold font-display text-secondary mb-1">20+</div>
-                  <div className="text-xs text-muted-foreground font-medium whitespace-nowrap">Features Launched</div>
                 </div>
               </div>
             </div>

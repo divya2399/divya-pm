@@ -5,10 +5,24 @@ import { Menu, X } from "lucide-react";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Detect active section
+      const sections = ["home", "about", "experience", "projects", "skills", "beyond", "contact"];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -51,17 +65,23 @@ const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-              </button>
-            ))}
+          <div className="hidden md:flex items-center gap-2">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace('#', '');
+              return (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.href)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 relative ${
+                    isActive 
+                      ? 'bg-primary text-primary-foreground shadow-soft' 
+                      : 'text-foreground/70 hover:text-primary hover:bg-primary/5'
+                  }`}
+                >
+                  {link.name}
+                </button>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}

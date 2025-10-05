@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const BeyondWorkSection = () => {
-  const interests = [
+  const stories = [
     {
       icon: Dog,
       title: "Pet Parent",
@@ -38,24 +38,23 @@ const BeyondWorkSection = () => {
     }
   ];
 
-  const funFacts = [
-    { icon: Coffee, title: "Coffee Enthusiast", description: "There is no bad time for a good cup of coffee", color: "secondary" },
-    { icon: Music, title: "Musicophile", description: "Looking for good music whenever I find the chance", color: "primary" },
-    { icon: Martini, title: "Day Drinker", description: "Visiting a good bar? Count me in for happy hour", color: "primary" },
-    { icon: Sun, title: "Beach Lover", description: "Always up for a good time at a sea shore", color: "secondary" }
+  const quickFacts = [
+    { icon: Coffee, text: "There is no bad time for a good cup of coffee", color: "secondary" },
+    { icon: Music, text: "Looking for good music whenever I find the chance", color: "primary" },
+    { icon: Martini, text: "Visiting a good bar? Count me in for happy hour", color: "primary" },
+    { icon: Sun, text: "Always up for a good time at a sea shore", color: "secondary" }
   ];
 
   return (
-    <section id="beyond" className="py-24 bg-background relative overflow-hidden">
-      {/* Softer, playful decorative elements */}
-      <div className="absolute top-10 right-10 w-96 h-96 bg-secondary/25 rounded-full blur-3xl animate-gentle-float" />
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-gentle-float" style={{ animationDelay: '2s' }} />
-      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-secondary/15 rounded-full blur-3xl animate-gentle-float" style={{ animationDelay: '4s' }} />
+    <section id="beyond" className="py-24 bg-background relative overflow-hidden grid-pattern">
+      {/* Softer decorative elements */}
+      <div className="absolute top-10 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-gentle-float" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-primary/15 rounded-full blur-3xl animate-gentle-float" style={{ animationDelay: '2s' }} />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header - More playful */}
-          <div className="text-center mb-16 animate-soft-fade-in">
+          {/* Section Header */}
+          <div className="text-center mb-20 animate-soft-fade-in">
             <Badge variant="outline" className="mb-4 border-secondary/40 text-secondary-foreground px-4 py-1.5">
               Beyond Work
             </Badge>
@@ -69,96 +68,89 @@ const BeyondWorkSection = () => {
             </p>
           </div>
 
-          {/* Main Interests - Open layout */}
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 mb-20">
-            {interests.map((interest, index) => (
+          {/* Storytelling horizontal cards layout */}
+          <div className="space-y-16 mb-24">
+            {stories.map((story, index) => (
               <div 
                 key={index}
-                className={`animate-expand-in ${
-                  index === 2 ? 'md:translate-y-8' : ''
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`flex flex-col ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                } gap-12 items-center animate-slide-in-soft`}
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className={`p-4 rounded-2xl hover:scale-110 transition-all ${
-                      interest.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                    }`}>
-                      <interest.icon className={`h-7 w-7 ${
-                        interest.color === 'primary' ? 'text-primary' : 'text-secondary'
-                      }`} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold font-display text-foreground mb-3">
-                        {interest.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {interest.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Playful accent line */}
-                  <div className={`h-1 w-16 rounded-full ml-16 ${
-                    interest.color === 'secondary' ? 'bg-gradient-accent' : 'bg-gradient-primary'
+                {/* Icon side */}
+                <div className={`flex-shrink-0 p-12 rounded-3xl ${
+                  story.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                } hover:scale-105 transition-transform`}>
+                  <story.icon className={`h-20 w-20 ${
+                    story.color === 'primary' ? 'text-primary' : 'text-secondary'
                   }`} />
+                </div>
+                
+                {/* Text side */}
+                <div className={`flex-1 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                  <h3 className="text-3xl font-bold font-display text-foreground mb-4">
+                    {story.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    {story.description}
+                  </p>
+                  <div className={`h-1 w-24 rounded-full mt-6 ${
+                    story.color === 'primary' ? 'bg-primary' : 'bg-secondary'
+                  } ${index % 2 === 0 ? '' : 'md:ml-auto'}`} />
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Fun Facts - Simple grid */}
+          {/* Quick facts - Horizontal scroll style */}
           <div className="mb-20 animate-soft-fade-in">
-            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-12 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-10">
               Quick Facts About Me
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-              {funFacts.map((fact, index) => (
+            <div className="flex flex-col md:flex-row gap-8">
+              {quickFacts.map((fact, index) => (
                 <div
                   key={index}
-                  className="group animate-expand-in text-center"
-                  style={{ animationDelay: `${index * 0.15}s` }}
+                  className="flex-1 flex items-start gap-4 group animate-expand-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`inline-block p-4 rounded-2xl mb-4 group-hover:scale-110 transition-all duration-300 ${
+                  <div className={`p-3 rounded-xl group-hover:scale-110 transition-transform ${
                     fact.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
                   }`}>
-                    <fact.icon className={`h-8 w-8 ${
+                    <fact.icon className={`h-6 w-6 ${
                       fact.color === 'primary' ? 'text-primary' : 'text-secondary'
                     }`} />
                   </div>
-                  <h4 className="font-bold font-display text-foreground mb-2 text-base">
-                    {fact.title}
-                  </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {fact.description}
+                  <p className="text-base text-foreground leading-relaxed flex-1">
+                    {fact.text}
                   </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Personal Philosophy - Open quote style */}
+          {/* Personal Philosophy */}
           <div className="relative animate-expand-in max-w-4xl mx-auto">
-            <div className="text-center py-10">
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-gradient-primary rounded-full" />
-                <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground">
+            <div className="py-12 px-8 md:px-16 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="h-1 w-12 bg-primary rounded-full" />
+                <h3 className="text-xl font-bold font-display text-foreground">
                   Personal Philosophy
                 </h3>
-                <div className="h-1 w-12 bg-gradient-accent rounded-full" />
               </div>
               
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light italic font-accent">
+              <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light italic">
                 "For me, it's always been about finding clarity in the chaos—taking something messy or complex and shaping it into something people can actually connect with and use. 
                 I lean on curiosity to uncover what really matters and empathy to make sure the outcome speaks to people, not just processes."
               </p>
 
-              {/* Playful decorative dots */}
-              <div className="flex justify-center gap-3 mt-8">
-                <div className="w-3 h-3 rounded-full bg-primary animate-pulse" />
-                <div className="w-3 h-3 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '0.2s' }} />
-                <div className="w-3 h-3 rounded-full bg-primary animate-pulse" style={{ animationDelay: '0.4s' }} />
+              {/* Decorative accent */}
+              <div className="flex gap-3 mt-8">
+                <div className="w-3 h-3 rounded-full bg-primary" />
+                <div className="w-3 h-3 rounded-full bg-secondary" />
+                <div className="w-3 h-3 rounded-full bg-primary" />
               </div>
             </div>
           </div>

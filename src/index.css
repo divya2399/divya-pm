@@ -133,6 +133,14 @@
       transparent 100%);
   }
 
+  /* Subtle grid pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(30 20% 85% / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(30 20% 85% / 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
   /* Delicate animations */
   .animate-gentle-float {
     animation: gentle-float 8s ease-in-out infinite;
