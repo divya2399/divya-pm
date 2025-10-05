@@ -66,12 +66,12 @@ const ExperienceSection = () => {
             </p>
           </div>
 
-          {/* Timeline with alternating layout - No boxes */}
+          {/* Timeline with cards */}
           <div className="relative">
-            {/* Delicate timeline line */}
+            {/* Timeline line */}
             <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-primary/30 transform -translate-x-1/2 opacity-40" />
 
-            <div className="space-y-20">
+            <div className="space-y-16">
               {experiences.map((exp, index) => (
                 <div 
                   key={index}
@@ -83,69 +83,66 @@ const ExperienceSection = () => {
                   {/* Timeline node */}
                   <div className="hidden lg:block absolute top-8 left-1/2 w-5 h-5 rounded-full border-4 border-background bg-primary transform -translate-x-1/2 shadow-soft z-10" />
 
-                  <div className={`lg:w-11/12 group ${index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-auto'}`}>
-                    <div className="space-y-6">
-                      {/* Header */}
-                      <div>
-                        <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground">
-                            {exp.role}
-                          </h3>
-                          <Badge variant="secondary" className="font-medium">
-                            {exp.type}
-                          </Badge>
-                        </div>
-                        
-                        <h4 className="text-xl font-semibold text-primary mb-3">
-                          {exp.company}
-                        </h4>
-                        
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
-                          <CalendarDays className="h-4 w-4" />
-                          {exp.period}
-                        </div>
-                      </div>
-
-                      {/* Achievements */}
-                      <div>
-                        <h5 className="font-bold text-foreground mb-4 flex items-center gap-2 text-base font-display">
-                          <Award className="h-5 w-5 text-secondary" />
-                          Key Achievements
-                        </h5>
-                        <ul className="space-y-3">
-                          {exp.achievements.map((achievement, achIndex) => (
-                            <li key={achIndex} className="flex items-start gap-3 text-muted-foreground">
-                              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                              <span className="leading-relaxed">{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Skills */}
-                      <div>
-                        <h5 className="font-bold text-foreground mb-3 flex items-center gap-2 text-base font-display">
-                          <TrendingUp className="h-5 w-5 text-primary" />
-                          Core Skills
-                        </h5>
-                        <div className="flex flex-wrap gap-2">
-                          {exp.skills.map((skill, skillIndex) => (
-                            <Badge 
-                              key={skillIndex} 
-                              variant="outline" 
-                              className="border-primary/40 text-xs hover:bg-primary/10 hover:scale-105 transition-all"
-                            >
-                              {skill}
+                  <div className={`lg:w-11/12 ${index % 2 === 0 ? 'lg:ml-0' : 'lg:ml-auto'}`}>
+                    <Card className="border-2 border-primary/20 shadow-soft hover:shadow-elegant hover-lift transition-all">
+                      <CardContent className="p-8 space-y-6">
+                        {/* Header */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-2 flex-wrap">
+                            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground">
+                              {exp.role}
+                            </h3>
+                            <Badge variant="secondary" className="font-medium">
+                              {exp.type}
                             </Badge>
-                          ))}
+                          </div>
+                          
+                          <h4 className="text-xl font-semibold text-primary mb-3">
+                            {exp.company}
+                          </h4>
+                          
+                          <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
+                            <CalendarDays className="h-4 w-4" />
+                            {exp.period}
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Decorative line */}
-                      <div className={`h-1 w-20 rounded-full ${
-                        index % 2 === 0 ? 'bg-gradient-primary' : 'bg-gradient-accent'
-                      }`} />
-                    </div>
+                        {/* Achievements */}
+                        <div>
+                          <h5 className="font-bold text-foreground mb-4 flex items-center gap-2 text-base font-display">
+                            <Award className="h-5 w-5 text-secondary" />
+                            Key Achievements
+                          </h5>
+                          <ul className="space-y-3">
+                            {exp.achievements.map((achievement, achIndex) => (
+                              <li key={achIndex} className="flex items-start gap-3 text-muted-foreground">
+                                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                                <span className="leading-relaxed">{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Skills */}
+                        <div>
+                          <h5 className="font-bold text-foreground mb-3 flex items-center gap-2 text-base font-display">
+                            <TrendingUp className="h-5 w-5 text-primary" />
+                            Core Skills
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill, skillIndex) => (
+                              <Badge 
+                                key={skillIndex} 
+                                variant="outline" 
+                                className="border-primary/40 text-xs hover:bg-primary/10 hover:scale-105 transition-all"
+                              >
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
                 </div>
               ))}

@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Code, BarChart3, Users, Palette, Cpu, Globe, Target, Sparkles } from "lucide-react";
 
 const SkillsSection = () => {
@@ -59,31 +60,29 @@ const SkillsSection = () => {
             </p>
           </div>
 
-          {/* Skill Categories - Open layout */}
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-12 mb-20">
+          {/* Skill Categories - Card Layout */}
+          <div className="grid md:grid-cols-2 gap-8 mb-20">
             {skillCategories.map((category, index) => (
-              <div 
+              <Card
                 key={index} 
-                className={`animate-expand-in group ${
-                  index === 2 ? 'md:translate-y-8' : ''
-                }`}
+                className="border-2 border-primary/20 shadow-soft hover:shadow-elegant hover-lift transition-all animate-expand-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="space-y-6">
+                <CardContent className="p-8 space-y-6">
                   <div className="flex items-center gap-4">
-                    <div className={`p-4 rounded-2xl transition-all duration-300 group-hover:scale-110 ${
+                    <div className={`p-4 rounded-2xl ${
                       category.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
                     }`}>
-                      <category.icon className={`h-7 w-7 ${
+                      <category.icon className={`h-8 w-8 ${
                         category.color === 'primary' ? 'text-primary' : 'text-secondary'
                       }`} />
                     </div>
-                    <h3 className="text-xl font-bold font-display text-foreground">
+                    <h3 className="text-2xl font-bold font-display text-foreground">
                       {category.title}
                     </h3>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 pl-2">
+                  <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
                       <Badge 
                         key={skillIndex} 
@@ -98,48 +97,46 @@ const SkillsSection = () => {
                       </Badge>
                     ))}
                   </div>
-
-                  {/* Accent line */}
-                  <div className={`h-1 w-16 rounded-full ${
-                    category.color === 'secondary' ? 'bg-gradient-accent' : 'bg-gradient-primary'
-                  }`} />
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
 
-          {/* Proficiency Indicators - Simple layout */}
+          {/* Proficiency Indicators - Horizontal bars */}
           <div className="animate-soft-fade-in">
-            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-12 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-12">
               Proficiency Levels
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="grid md:grid-cols-2 gap-8">
               {proficiencies.map((item, index) => (
-                <div 
+                <Card
                   key={index} 
-                  className="group animate-expand-in text-center"
-                  style={{ animationDelay: `${index * 0.15}s` }}
+                  className="border-2 border-primary/20 shadow-soft hover:shadow-elegant transition-all animate-expand-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="inline-block mb-4">
-                    <div className={`p-5 rounded-full group-hover:scale-110 transition-all duration-300 ${
-                      item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                    }`}>
-                      <item.icon className={`h-10 w-10 ${
-                        item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                      }`} />
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4">
+                      <div className={`p-4 rounded-xl ${
+                        item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                      }`}>
+                        <item.icon className={`h-7 w-7 ${
+                          item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                        }`} />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold font-display text-foreground text-lg mb-1">
+                          {item.label}
+                        </h4>
+                        <p className={`text-sm font-medium ${
+                          item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                        }`}>
+                          {item.level}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <h4 className="font-bold font-display text-foreground mb-2 text-lg">
-                    {item.label}
-                  </h4>
-                  <p className={`text-sm font-medium ${
-                    item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                  }`}>
-                    {item.level}
-                  </p>
-                </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
