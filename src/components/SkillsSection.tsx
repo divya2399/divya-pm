@@ -102,38 +102,34 @@ const SkillsSection = () => {
             ))}
           </div>
 
-          {/* Proficiency Indicators - Horizontal bars */}
+          {/* Proficiency Indicators - Square Cards */}
           <div className="animate-soft-fade-in">
             <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-12">
               Proficiency Levels
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {proficiencies.map((item, index) => (
                 <div
                   key={index} 
-                  className="p-6 rounded-lg border-2 border-primary/20 bg-card shadow-soft hover:shadow-elegant transition-all animate-expand-in"
+                  className="aspect-square p-6 rounded-lg border-2 border-primary/20 bg-card shadow-soft hover:shadow-elegant hover:scale-105 transition-all animate-expand-in flex flex-col items-center justify-center text-center"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className={`p-4 rounded-xl ${
-                      item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                    }`}>
-                      <item.icon className={`h-7 w-7 ${
-                        item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                      }`} />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold font-display text-foreground text-lg mb-1">
-                        {item.label}
-                      </h4>
-                      <p className={`text-sm font-medium ${
-                        item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                      }`}>
-                        {item.level}
-                      </p>
-                    </div>
+                  <div className={`p-4 rounded-xl mb-4 ${
+                    item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                  }`}>
+                    <item.icon className={`h-8 w-8 ${
+                      item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                    }`} />
                   </div>
+                  <h4 className="font-bold font-display text-foreground text-base mb-2">
+                    {item.label}
+                  </h4>
+                  <p className={`text-sm font-medium ${
+                    item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                  }`}>
+                    {item.level}
+                  </p>
                 </div>
               ))}
             </div>
