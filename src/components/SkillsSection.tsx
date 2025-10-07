@@ -103,16 +103,16 @@ const SkillsSection = () => {
           </div>
 
           {/* Proficiency Indicators - Square Cards */}
-          <div className="animate-soft-fade-in">
+          <div className="animate-soft-fade-in text-center">
             <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-8">
               Proficiency Levels
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
               {proficiencies.map((item, index) => (
                 <div
                   key={index} 
-                  className={`aspect-square p-3 rounded-xl border-2 border-primary/20 shadow-soft hover:shadow-elegant hover:scale-105 transition-all animate-expand-in flex flex-col items-center justify-center text-center ${
+                  className={`aspect-square p-2.5 rounded-xl border-2 border-primary/20 shadow-soft hover:shadow-elegant hover:scale-105 transition-all animate-expand-in flex flex-col items-center justify-center text-center ${
                     item.color === 'primary' 
                       ? 'bg-gradient-to-br from-primary/5 to-primary/10' 
                       : 'bg-gradient-to-br from-secondary/5 to-secondary/10'
@@ -122,14 +122,14 @@ const SkillsSection = () => {
                   <div className={`p-2 rounded-lg mb-2 ${
                     item.color === 'primary' ? 'bg-primary/15' : 'bg-secondary/15'
                   }`}>
-                    <item.icon className={`h-5 w-5 ${
+                    <item.icon className={`h-4 w-4 ${
                       item.color === 'primary' ? 'text-primary' : 'text-secondary'
                     }`} />
                   </div>
-                  <h4 className="font-bold font-display text-foreground text-xs mb-0.5">
+                  <h4 className="font-bold font-display text-foreground text-sm mb-0.5">
                     {item.label}
                   </h4>
-                  <p className={`text-[10px] font-medium ${
+                  <p className={`text-xs font-medium ${
                     item.color === 'primary' ? 'text-primary' : 'text-secondary'
                   }`}>
                     {item.level}
