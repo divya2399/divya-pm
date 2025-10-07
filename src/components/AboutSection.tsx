@@ -47,27 +47,23 @@ const AboutSection = () => {
 
           {/* Main Content with Cards */}
           <div className="grid lg:grid-cols-12 gap-10 mb-20">
-            {/* Bio Card */}
-            <div className="lg:col-span-7 animate-slide-in-soft">
-              <Card className="border-2 border-primary/20 shadow-soft hover:shadow-elegant transition-all">
-                <CardContent className="p-8 space-y-6">
-                  <p className="text-lg text-foreground leading-relaxed">
-                    Drawing on over 4 years of experience across SaaS and BioTech industries, I bridge business challenges and technology to deliver results. I work consistently towards efficiency and driving value for users and organizations alike.
-                  </p>
-                  <p className="text-lg text-foreground leading-relaxed">
-                    I started my career curious about how technology could transform the way we work, gaining experience in both BioTech and SaaS. Along the way, I saw how the right solutions can simplify complexity and deliver real impact.
-                  </p>
-                  <p className="text-lg text-foreground leading-relaxed">
-                    Working across teams, I naturally gravitated toward product management—where ideas become tangible outcomes. From streamlining processes to building dashboards and automations, I found my strength in turning vision into action.
-                  </p>
+            {/* Bio - No Card */}
+            <div className="lg:col-span-7 animate-slide-in-soft space-y-6">
+              <p className="text-lg text-foreground leading-relaxed">
+                Drawing on over 4 years of experience across SaaS and BioTech industries, I bridge business challenges and technology to deliver results. I work consistently towards efficiency and driving value for users and organizations alike.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                I started my career curious about how technology could transform the way we work, gaining experience in both BioTech and SaaS. Along the way, I saw how the right solutions can simplify complexity and deliver real impact.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed">
+                Working across teams, I naturally gravitated toward product management—where ideas become tangible outcomes. From streamlining processes to building dashboards and automations, I found my strength in turning vision into action.
+              </p>
 
-                  <div className="pt-4 pl-6 border-l-4 border-secondary/40 bg-secondary/5 rounded-r-lg p-6">
-                    <p className="text-xl text-foreground/90 leading-relaxed italic font-accent">
-                      Today, I bring a data-driven, agile, and collaborative approach to product management, always focused on uncovering user pain points and shaping them into scalable solutions that spark innovation.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="pt-4 pl-6 border-l-4 border-secondary/40 bg-secondary/5 rounded-r-lg p-6">
+                <p className="text-xl text-foreground/90 leading-relaxed italic font-accent">
+                  Today, I bring a data-driven, agile, and collaborative approach to product management, always focused on uncovering user pain points and shaping them into scalable solutions that spark innovation.
+                </p>
+              </div>
             </div>
 
             {/* Highlights Cards */}

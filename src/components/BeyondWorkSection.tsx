@@ -69,33 +69,33 @@ const BeyondWorkSection = () => {
           </div>
 
           {/* Storytelling horizontal cards layout */}
-          <div className="space-y-16 mb-24">
+          <div className="space-y-8 mb-16">
             {stories.map((story, index) => (
               <div 
                 key={index}
                 className={`flex flex-col ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } gap-12 items-center animate-slide-in-soft`}
+                } gap-6 items-center animate-slide-in-soft`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {/* Icon side */}
-                <div className={`flex-shrink-0 p-12 rounded-3xl ${
+                <div className={`flex-shrink-0 p-8 rounded-2xl ${
                   story.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
                 } hover:scale-105 transition-transform`}>
-                  <story.icon className={`h-20 w-20 ${
+                  <story.icon className={`h-14 w-14 ${
                     story.color === 'primary' ? 'text-primary' : 'text-secondary'
                   }`} />
                 </div>
                 
                 {/* Text side */}
                 <div className={`flex-1 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                  <h3 className="text-3xl font-bold font-display text-foreground mb-4">
+                  <h3 className="text-2xl font-bold font-display text-foreground mb-3">
                     {story.title}
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {story.description}
                   </p>
-                  <div className={`h-1 w-24 rounded-full mt-6 ${
+                  <div className={`h-1 w-20 rounded-full mt-4 ${
                     story.color === 'primary' ? 'bg-primary' : 'bg-secondary'
                   } ${index % 2 === 0 ? '' : 'md:ml-auto'}`} />
                 </div>
@@ -104,26 +104,26 @@ const BeyondWorkSection = () => {
           </div>
 
           {/* Quick facts - Horizontal scroll style */}
-          <div className="mb-20 animate-soft-fade-in">
-            <h3 className="text-2xl md:text-3xl font-bold font-display text-foreground mb-10">
+          <div className="mb-14 animate-soft-fade-in">
+            <h3 className="text-2xl font-bold font-display text-foreground mb-8">
               Quick Facts About Me
             </h3>
             
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-6">
               {quickFacts.map((fact, index) => (
                 <div
                   key={index}
-                  className="flex-1 flex items-start gap-4 group animate-expand-in"
+                  className="flex-1 flex items-start gap-3 group animate-expand-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`p-3 rounded-xl group-hover:scale-110 transition-transform ${
+                  <div className={`p-2.5 rounded-lg group-hover:scale-110 transition-transform ${
                     fact.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
                   }`}>
-                    <fact.icon className={`h-6 w-6 ${
+                    <fact.icon className={`h-5 w-5 ${
                       fact.color === 'primary' ? 'text-primary' : 'text-secondary'
                     }`} />
                   </div>
-                  <p className="text-base text-foreground leading-relaxed flex-1">
+                  <p className="text-sm text-foreground leading-relaxed flex-1">
                     {fact.text}
                   </p>
                 </div>
@@ -133,24 +133,24 @@ const BeyondWorkSection = () => {
 
           {/* Personal Philosophy */}
           <div className="relative animate-expand-in max-w-4xl mx-auto">
-            <div className="py-12 px-8 md:px-16 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-primary rounded-full" />
-                <h3 className="text-xl font-bold font-display text-foreground">
+            <div className="py-8 px-6 md:px-12 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-1 w-10 bg-primary rounded-full" />
+                <h3 className="text-lg font-bold font-display text-foreground">
                   Personal Philosophy
                 </h3>
               </div>
               
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light italic">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed font-light italic">
                 "For me, it's always been about finding clarity in the chaos—taking something messy or complex and shaping it into something people can actually connect with and use. 
                 I lean on curiosity to uncover what really matters and empathy to make sure the outcome speaks to people, not just processes."
               </p>
 
               {/* Decorative accent */}
-              <div className="flex gap-3 mt-8">
-                <div className="w-3 h-3 rounded-full bg-primary" />
-                <div className="w-3 h-3 rounded-full bg-secondary" />
-                <div className="w-3 h-3 rounded-full bg-primary" />
+              <div className="flex gap-2 mt-6">
+                <div className="w-2 h-2 rounded-full bg-primary" />
+                <div className="w-2 h-2 rounded-full bg-secondary" />
+                <div className="w-2 h-2 rounded-full bg-primary" />
               </div>
             </div>
           </div>

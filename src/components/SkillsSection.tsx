@@ -110,33 +110,31 @@ const SkillsSection = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {proficiencies.map((item, index) => (
-                <Card
+                <div
                   key={index} 
-                  className="border-2 border-primary/20 shadow-soft hover:shadow-elegant transition-all animate-expand-in"
+                  className="p-6 rounded-lg border-2 border-primary/20 bg-card shadow-soft hover:shadow-elegant transition-all animate-expand-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className={`p-4 rounded-xl ${
-                        item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                      }`}>
-                        <item.icon className={`h-7 w-7 ${
-                          item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                        }`} />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold font-display text-foreground text-lg mb-1">
-                          {item.label}
-                        </h4>
-                        <p className={`text-sm font-medium ${
-                          item.color === 'primary' ? 'text-primary' : 'text-secondary'
-                        }`}>
-                          {item.level}
-                        </p>
-                      </div>
+                  <div className="flex items-center gap-4">
+                    <div className={`p-4 rounded-xl ${
+                      item.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                    }`}>
+                      <item.icon className={`h-7 w-7 ${
+                        item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                      }`} />
                     </div>
-                  </CardContent>
-                </Card>
+                    <div className="flex-1">
+                      <h4 className="font-bold font-display text-foreground text-lg mb-1">
+                        {item.label}
+                      </h4>
+                      <p className={`text-sm font-medium ${
+                        item.color === 'primary' ? 'text-primary' : 'text-secondary'
+                      }`}>
+                        {item.level}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
