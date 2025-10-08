@@ -1,5 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import petParentImg from "@/assets/pet-parent.jpg";
+import cookingImg from "@/assets/cooking.jpg";
+import familyImg from "@/assets/family.jpg";
+import aestheticsImg from "@/assets/aesthetics.jpg";
 import { 
   Dog, 
   CookingPot, 
@@ -17,29 +21,28 @@ const BeyondWorkSection = () => {
       icon: Dog,
       title: "Pet Parent",
       description: "Overcame my fear of dogs to become a dog mom to Lilly",
-      // Photo placeholder - replace with actual image path
-      photo: "/placeholder.svg",
+      photo: petParentImg,
       color: "primary"
     },
     {
       icon: CookingPot,
       title: "Cooking & Baking",
       description: "Experimenting with recipes from banana bread to thai curry",
-      photo: "/placeholder.svg",
+      photo: cookingImg,
       color: "secondary"
     },
     {
       icon: BookOpen,
       title: "Fabulous five",
       description: "Eldest sibling to two; my family is my everything.",
-      photo: "/placeholder.svg",
+      photo: familyImg,
       color: "primary"
     },
     {
       icon: Palette,
       title: "Chasing Aesthetics",
       description: "Finding beauty in life, picking up a brush from time to time",
-      photo: "/placeholder.svg",
+      photo: aestheticsImg,
       color: "secondary"
     }
   ];
