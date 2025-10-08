@@ -5,7 +5,7 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background py-12">
       {/* Large organic blob shapes inspired by reference */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-[60%_40%_30%_70%/40%_60%_30%_70%] blur-2xl animate-gentle-float" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/25 rounded-[40%_60%_70%_30%/60%_30%_70%_40%] blur-2xl animate-gentle-float" style={{ animationDelay: '3s' }} />

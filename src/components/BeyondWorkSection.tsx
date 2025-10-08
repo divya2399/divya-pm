@@ -55,7 +55,7 @@ const BeyondWorkSection = () => {
   ];
 
   return (
-    <section id="beyond" className="py-24 bg-background relative overflow-hidden">
+    <section id="beyond" className="py-12 bg-background relative overflow-hidden">
       {/* Softer decorative elements */}
       <div className="absolute top-10 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-gentle-float" />
       <div className="absolute bottom-10 left-10 w-80 h-80 bg-primary/15 rounded-full blur-3xl animate-gentle-float" style={{ animationDelay: '2s' }} />
