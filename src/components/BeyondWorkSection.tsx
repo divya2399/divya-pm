@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { 
   Dog, 
   CookingPot, 
@@ -15,25 +16,30 @@ const BeyondWorkSection = () => {
     {
       icon: Dog,
       title: "Pet Parent",
-      description: "Overcame my life long fear of dogs to become a dog mom to a beautiful 2 year old Indian Pariah, named Lilly.",
+      description: "Overcame my fear of dogs to become a dog mom to Lilly",
+      // Photo placeholder - replace with actual image path
+      photo: "/placeholder.svg",
       color: "primary"
     },
     {
       icon: CookingPot,
       title: "Cooking & Baking",
-      description: "Passionate about experimenting with different recipes; from banana bread to thai curry.",
+      description: "Experimenting with recipes from banana bread to thai curry",
+      photo: "/placeholder.svg",
       color: "secondary"
     },
     {
       icon: BookOpen,
       title: "Continuous Learning",
-      description: "Avid reader of product strategy, technology trends, and behavioral psychology. Always exploring new frameworks and methodologies.",
+      description: "Avid reader of product strategy and behavioral psychology",
+      photo: "/placeholder.svg",
       color: "primary"
     },
     {
       icon: Palette,
       title: "Chasing Aesthetics",
-      description: "Always looking for aesthetics in life, home, products and people. I pick up a brush and a paper from time to time.",
+      description: "Finding beauty in life, picking up a brush from time to time",
+      photo: "/placeholder.svg",
       color: "secondary"
     }
   ];
@@ -68,38 +74,42 @@ const BeyondWorkSection = () => {
             </p>
           </div>
 
-          {/* Storytelling horizontal cards layout */}
-          <div className="space-y-8 mb-16">
+          {/* Compact photo grid layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
             {stories.map((story, index) => (
-              <div 
+              <Card
                 key={index}
-                className={`flex flex-col ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } gap-6 items-center animate-slide-in-soft`}
-                style={{ animationDelay: `${index * 0.15}s` }}
+                className="border-2 border-primary/20 shadow-soft hover:shadow-elegant hover-lift transition-all overflow-hidden animate-expand-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Icon side */}
-                <div className={`flex-shrink-0 p-8 rounded-2xl ${
-                  story.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
-                } hover:scale-105 transition-transform`}>
-                  <story.icon className={`h-14 w-14 ${
-                    story.color === 'primary' ? 'text-primary' : 'text-secondary'
-                  }`} />
-                </div>
-                
-                {/* Text side */}
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                  <h3 className="text-2xl font-bold font-display text-foreground mb-3">
-                    {story.title}
-                  </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    {story.description}
-                  </p>
-                  <div className={`h-1 w-20 rounded-full mt-4 ${
-                    story.color === 'primary' ? 'bg-primary' : 'bg-secondary'
-                  } ${index % 2 === 0 ? '' : 'md:ml-auto'}`} />
-                </div>
-              </div>
+                <CardContent className="p-0">
+                  {/* Photo section */}
+                  <div className="relative h-40 overflow-hidden">
+                    <img 
+                      src={story.photo} 
+                      alt={story.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className={`absolute top-3 right-3 p-2 rounded-lg backdrop-blur-sm ${
+                      story.color === 'primary' ? 'bg-primary/20' : 'bg-secondary/20'
+                    }`}>
+                      <story.icon className={`h-5 w-5 ${
+                        story.color === 'primary' ? 'text-primary' : 'text-secondary'
+                      }`} />
+                    </div>
+                  </div>
+                  
+                  {/* Text content */}
+                  <div className="p-5 space-y-2">
+                    <h3 className="text-lg font-bold font-display text-foreground">
+                      {story.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {story.description}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
 

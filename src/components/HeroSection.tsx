@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Download, Linkedin, ArrowRight } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
@@ -17,6 +18,13 @@ const HeroSection = () => {
             <div className="space-y-10 animate-soft-fade-in order-2 lg:order-1">
               {/* Main heading - Bold and creative */}
               <div className="space-y-4">
+                {/* Available to opportunities badge */}
+                <div className="inline-block">
+                  <Badge variant="outline" className="border-primary/30 text-primary/70 px-3 py-1 text-xs font-medium">
+                    Available to Opportunities
+                  </Badge>
+                </div>
+                
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display text-foreground leading-[1.1] tracking-tight">
                   I AM A CREATIVE
                 </h1>
@@ -44,7 +52,7 @@ const HeroSection = () => {
                 <a href="/Divya_Sharma_Product_Resume.pdf" download="Divya_Sharma_Product_Resume.pdf">
                   <Button variant="outline" size="lg" className="group text-base font-semibold border-2 border-primary/30 hover:border-primary hover:bg-primary/5 transition-all">
                     <Download className="h-5 w-5" />
-                    Portfolio
+                    Resume
                   </Button>
                 </a>
               </div>

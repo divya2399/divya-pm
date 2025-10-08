@@ -108,7 +108,7 @@ const SkillsSection = () => {
               Proficiency Levels
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-2xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {proficiencies.map((item, index) => (
                 <div
                   key={index} 
