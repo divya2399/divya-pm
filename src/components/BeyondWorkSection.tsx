@@ -30,8 +30,8 @@ const BeyondWorkSection = () => {
     },
     {
       icon: BookOpen,
-      title: "Continuous Learning",
-      description: "Avid reader of product strategy and behavioral psychology",
+      title: "Fabulous five",
+      description: "Eldest sibling to two; my family is my everything.",
       photo: "/placeholder.svg",
       color: "primary"
     },
