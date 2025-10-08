@@ -78,7 +78,7 @@ const BeyondWorkSection = () => {
           </div>
 
           {/* Compact photo grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
             {stories.map((story, index) => (
               <Card
                 key={index}
@@ -103,11 +103,11 @@ const BeyondWorkSection = () => {
                   </div>
                   
                   {/* Text content */}
-                  <div className="p-3 space-y-1">
-                    <h3 className="text-base font-bold font-display text-foreground">
+                  <div className="p-4 space-y-1.5">
+                    <h3 className="text-xl font-bold font-display text-foreground">
                       {story.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       {story.description}
                     </p>
                   </div>

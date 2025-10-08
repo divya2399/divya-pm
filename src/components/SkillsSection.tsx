@@ -108,11 +108,11 @@ const SkillsSection = () => {
               Proficiency Levels
             </h3>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {proficiencies.map((item, index) => (
                 <div
                   key={index} 
-                  className={`aspect-square p-2.5 rounded-xl border-2 border-primary/20 shadow-soft hover:shadow-elegant hover:scale-105 transition-all animate-expand-in flex flex-col items-center justify-center text-center ${
+                  className={`aspect-square p-2.5 rounded-xl border-2 border-primary/20 shadow-soft hover:shadow-elegant hover:scale-105 transition-all animate-expand-in flex flex-col items-center justify-center text-center max-w-[120px] mx-auto ${
                     item.color === 'primary' 
                       ? 'bg-gradient-to-br from-primary/5 to-primary/10' 
                       : 'bg-gradient-to-br from-secondary/5 to-secondary/10'
@@ -126,10 +126,10 @@ const SkillsSection = () => {
                       item.color === 'primary' ? 'text-primary' : 'text-secondary'
                     }`} />
                   </div>
-                  <h4 className="font-bold font-display text-foreground text-sm mb-0.5">
+                  <h4 className="font-bold font-display text-foreground text-[0.9625rem] mb-0.5">
                     {item.label}
                   </h4>
-                  <p className={`text-xs font-medium ${
+                  <p className={`text-[0.825rem] font-medium ${
                     item.color === 'primary' ? 'text-primary' : 'text-secondary'
                   }`}>
                     {item.level}
