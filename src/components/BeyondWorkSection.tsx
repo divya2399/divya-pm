@@ -87,7 +87,7 @@ const BeyondWorkSection = () => {
               >
                 <CardContent className="p-0">
                   {/* Photo section */}
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative h-52 overflow-hidden">
                     <img 
                       src={story.photo} 
                       alt={story.title}
@@ -103,11 +103,11 @@ const BeyondWorkSection = () => {
                   </div>
                   
                   {/* Text content */}
-                  <div className="p-5 space-y-2">
-                    <h3 className="text-lg font-bold font-display text-foreground">
+                  <div className="p-3 space-y-1">
+                    <h3 className="text-base font-bold font-display text-foreground">
                       {story.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-xs text-muted-foreground leading-relaxed">
                       {story.description}
                     </p>
                   </div>
