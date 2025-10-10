@@ -26,15 +26,15 @@ const HeroSection = () => {
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display text-foreground leading-[1.1] tracking-tight">
-                  I AM A CREATIVE
+                  Hi,
                 </h1>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display text-foreground leading-[1.1] tracking-tight">
-                  PRODUCT MANAGER
+                  Welcome to My Habitat!
                 </h1>
                 
                 <div className="pt-4 max-w-lg">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Hi there! I'm Divya Sharma. As a product manager, I understand the importance of 
+                    My name is Divya Sharma. As a product manager, I understand the importance of 
                     creating user-friendly solutions that drive real impact for businesses and their users.
                   </p>
                 </div>
