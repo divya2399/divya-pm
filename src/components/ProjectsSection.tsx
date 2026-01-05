@@ -8,29 +8,25 @@ const ProjectsSection = () => {
       title: "AutoCook : A Product Roadmap",
       description: "Spearheaded product strategy for an AI-powered cooking appliance, leveraging market research, competitor analysis, and user profiling to define unique differentiators to enhance product-market fit.",
       technologies: ["Product Development", "Data Analysis", "Roadmapping", "Pricing"],
-      embedUrl: "https://www.canva.com/design/DAGdblLSqOc/fsivy_Yly4cFkX5oGjGJkg/view?embed",
-      thumbnail: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=450&fit=crop"
+      embedUrl: "https://www.canva.com/design/DAGdblLSqOc/fsivy_Yly4cFkX5oGjGJkg/view?embed"
     },
     {
       title: "Naitiv AI - Interpretation Platform",
       description: "Conducted market research and competitive analysis for an interpretation platform, focusing on developing GTM strategy and identifying MVP, to strengthen platform's market positioning.",
       technologies: ["Design Thinking", "User Research", "Empathy", "Communication"],
-      embedUrl: "https://www.canva.com/design/DAGdbleNLpA/IM4KfObdzl5sVOda1lGbwQ/view?embed",
-      thumbnail: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=450&fit=crop"
+      embedUrl: "https://www.canva.com/design/DAGdbleNLpA/IM4KfObdzl5sVOda1lGbwQ/view?embed"
     },
     {
       title: "A 21Seeds Story",
       description: "Built a data-driven growth plan for 21Seeds—aligning distribution, brand, and product bets into a phased roadmap that preserves authenticity while driving 1.75L launch and double-digit expansion",
       technologies: ["GTM", "Pricing Strategy", "Market Expansion", "Collaboration"],
-      embedUrl: "https://www.canva.com/design/DAGlMoHTKhk/mMGwX968CPCv0Vj_G8Ya2A/view?embed",
-      thumbnail: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&h=450&fit=crop"
+      embedUrl: "https://www.canva.com/design/DAGlMoHTKhk/mMGwX968CPCv0Vj_G8Ya2A/view?embed"
     },
     {
       title: "Future Pathway for Netflix",
       description: "Synthesized Netflix's competitive landscape using market, and scenario analyses to translate insights into a phased strategy and learnings in user research, prioritization, and outcome-focused roadmapping",
       technologies: ["Strategy", "Critical Thinking", "Market Analysis", "Prioritization"],
-      embedUrl: "https://www.canva.com/design/DAGkk1fsUGo/L6g1dhieB6Z5bSWmfqwZBg/view?embed",
-      thumbnail: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&h=450&fit=crop"
+      embedUrl: "https://www.canva.com/design/DAGkk1fsUGo/L6g1dhieB6Z5bSWmfqwZBg/view?embed"
     }
   ];
 
@@ -73,15 +69,16 @@ const ProjectsSection = () => {
                       index % 2 === 0 ? 'bg-primary/20' : 'bg-secondary/20'
                     } blur-3xl z-10 pointer-events-none`} />
                     
-                    {/* Thumbnail image */}
-                    <img 
-                      src={project.thumbnail}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
+                    {/* Canva embedded presentation */}
+                    <iframe 
+                      src={project.embedUrl}
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                      title={project.title}
                     />
                     
-                    {/* Overlay with View Project button */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-6 z-20">
+                    {/* View Project button overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-6 flex justify-center z-20">
                       <a
                         href={project.embedUrl.replace('/view?embed', '/view')}
                         target="_blank"
