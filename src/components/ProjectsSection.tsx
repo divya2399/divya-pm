@@ -8,25 +8,29 @@ const ProjectsSection = () => {
       title: "AutoCook : A Product Roadmap",
       description: "Spearheaded product strategy for an AI-powered cooking appliance, leveraging market research, competitor analysis, and user profiling to define unique differentiators to enhance product-market fit.",
       technologies: ["Product Development", "Data Analysis", "Roadmapping", "Pricing"],
-      embedUrl: "https://www.canva.com/design/DAGdblLSqOc/fsivy_Yly4cFkX5oGjGJkg/view?embed"
+      embedUrl: "https://www.canva.com/design/DAGdblLSqOc/fsivy_Yly4cFkX5oGjGJkg/view?embed",
+      thumbnail: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=450&fit=crop"
     },
     {
       title: "Naitiv AI - Interpretation Platform",
       description: "Conducted market research and competitive analysis for an interpretation platform, focusing on developing GTM strategy and identifying MVP, to strengthen platform's market positioning.",
       technologies: ["Design Thinking", "User Research", "Empathy", "Communication"],
-      embedUrl: "https://www.canva.com/design/DAGdbleNLpA/IM4KfObdzl5sVOda1lGbwQ/view?embed"
+      embedUrl: "https://www.canva.com/design/DAGdbleNLpA/IM4KfObdzl5sVOda1lGbwQ/view?embed",
+      thumbnail: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=450&fit=crop"
     },
     {
       title: "A 21Seeds Story",
       description: "Built a data-driven growth plan for 21Seeds—aligning distribution, brand, and product bets into a phased roadmap that preserves authenticity while driving 1.75L launch and double-digit expansion",
       technologies: ["GTM", "Pricing Strategy", "Market Expansion", "Collaboration"],
-      embedUrl: "https://www.canva.com/design/DAGlMoHTKhk/mMGwX968CPCv0Vj_G8Ya2A/view?embed"
+      embedUrl: "https://www.canva.com/design/DAGlMoHTKhk/mMGwX968CPCv0Vj_G8Ya2A/view?embed",
+      thumbnail: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800&h=450&fit=crop"
     },
     {
       title: "Future Pathway for Netflix",
       description: "Synthesized Netflix's competitive landscape using market, and scenario analyses to translate insights into a phased strategy and learnings in user research, prioritization, and outcome-focused roadmapping",
       technologies: ["Strategy", "Critical Thinking", "Market Analysis", "Prioritization"],
-      embedUrl: "https://www.canva.com/design/DAGkk1fsUGo/L6g1dhieB6Z5bSWmfqwZBg/view?embed"
+      embedUrl: "https://www.canva.com/design/DAGkk1fsUGo/L6g1dhieB6Z5bSWmfqwZBg/view?embed",
+      thumbnail: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&h=450&fit=crop"
     }
   ];
 
@@ -63,32 +67,32 @@ const ProjectsSection = () => {
               >
                 {/* Project Preview - Alternates sides */}
                 <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} relative group`}>
-                  <a 
-                    href={project.embedUrl.replace('/view?embed', '/view')} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block relative aspect-video rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift cursor-pointer"
-                  >
+                  <div className="relative aspect-video rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift">
                     {/* Soft corner accent */}
                     <div className={`absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-32 h-32 ${
                       index % 2 === 0 ? 'bg-primary/20' : 'bg-secondary/20'
                     } blur-3xl z-10 pointer-events-none`} />
                     
-                    {/* Thumbnail image instead of iframe */}
+                    {/* Thumbnail image */}
                     <img 
-                      src={`https://via.placeholder.com/800x450/f8f5f0/1a1a2e?text=${encodeURIComponent(project.title)}`}
+                      src={project.thumbnail}
                       alt={project.title}
                       className="w-full h-full object-cover"
                     />
                     
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 z-20">
-                      <div className="flex items-center gap-2 text-primary font-semibold">
+                    {/* Overlay with View Project button */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center p-6 z-20">
+                      <a
+                        href={project.embedUrl.replace('/view?embed', '/view')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+                      >
                         <ExternalLink className="h-4 w-4" />
-                        <span className="text-sm">View Project</span>
-                      </div>
+                        View Project
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 </div>
 
                 {/* Project Details - Alternates sides */}
