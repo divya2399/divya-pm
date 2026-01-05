@@ -12,7 +12,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Detect active section
-      const sections = ["home", "about", "experience", "projects", "skills", "beyond", "contact"];
+      const sections = ["home", "about", "experience", "projects", "skills", "contact"];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -34,7 +34,6 @@ const Navigation = () => {
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
-    { name: "Beyond Work", href: "#beyond" },
     { name: "Contact", href: "#contact" },
   ];
 
