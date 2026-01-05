@@ -3,10 +3,21 @@ import {
   Coffee,
   Music, 
   Martini,
-  Sun
+  Sun,
+  Dumbbell,
+  BookOpen,
+  CookingPot,
+  Music2
 } from "lucide-react";
 
 const BeyondWorkSection = () => {
+  const hobbies = [
+    { icon: Dumbbell, title: "Working Out", description: "Placeholder text for working out hobby" },
+    { icon: BookOpen, title: "Reading", description: "Placeholder text for reading hobby" },
+    { icon: CookingPot, title: "Cooking", description: "Placeholder text for cooking hobby" },
+    { icon: Music2, title: "Dancing", description: "Placeholder text for dancing hobby" }
+  ];
+
   const quickFacts = [
     { icon: Coffee, text: "There is no bad time for a good cup of coffee", color: "secondary" },
     { icon: Music, text: "Looking for good music whenever I find the chance", color: "primary" },
@@ -35,6 +46,29 @@ const BeyondWorkSection = () => {
               The experiences and passions that shape my perspective, drive creativity, 
               and contribute to my approach to problem-solving and leadership.
             </p>
+          </div>
+
+          {/* Hobbies & Interests */}
+          <div className="mb-14 animate-soft-fade-in">
+            <h3 className="text-2xl font-bold font-display text-foreground mb-8">
+              Hobbies & Interests
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {hobbies.map((hobby, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center gap-3 group animate-expand-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="p-3 rounded-xl bg-primary/10 group-hover:scale-110 transition-transform">
+                    <hobby.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h4 className="font-semibold text-foreground">{hobby.title}</h4>
+                  <p className="text-sm text-muted-foreground">{hobby.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Quick facts */}
