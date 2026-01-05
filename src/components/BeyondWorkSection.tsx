@@ -1,52 +1,12 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import petParentImg from "@/assets/pet-parent.jpg";
-import cookingImg from "@/assets/cooking.jpg";
-import familyImg from "@/assets/family.jpg";
-import aestheticsImg from "@/assets/aesthetics.jpg";
 import { 
-  Dog, 
-  CookingPot, 
-  BookOpen, 
-  Palette, 
+  Coffee,
   Music, 
   Martini,
-  Coffee,
   Sun
 } from "lucide-react";
 
 const BeyondWorkSection = () => {
-  const stories = [
-    {
-      icon: Dog,
-      title: "Pet Parent",
-      description: "Overcame my fear of dogs to become a dog mom to Lilly",
-      photo: petParentImg,
-      color: "primary"
-    },
-    {
-      icon: CookingPot,
-      title: "Cooking & Baking",
-      description: "Experimenting with recipes from banana bread to thai curry",
-      photo: cookingImg,
-      color: "secondary"
-    },
-    {
-      icon: BookOpen,
-      title: "Fabulous five",
-      description: "Eldest sibling to two; my family is my everything.",
-      photo: familyImg,
-      color: "primary"
-    },
-    {
-      icon: Palette,
-      title: "Chasing Aesthetics",
-      description: "Finding beauty in life, picking up a brush from time to time",
-      photo: aestheticsImg,
-      color: "secondary"
-    }
-  ];
-
   const quickFacts = [
     { icon: Coffee, text: "There is no bad time for a good cup of coffee", color: "secondary" },
     { icon: Music, text: "Looking for good music whenever I find the chance", color: "primary" },
@@ -63,7 +23,7 @@ const BeyondWorkSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-20 animate-soft-fade-in">
+          <div className="text-center mb-16 animate-soft-fade-in">
             <Badge variant="outline" className="mb-4 border-secondary/40 text-secondary-foreground px-4 py-1.5">
               Beyond Work
             </Badge>
@@ -77,46 +37,7 @@ const BeyondWorkSection = () => {
             </p>
           </div>
 
-          {/* Compact photo grid layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
-            {stories.map((story, index) => (
-              <Card
-                key={index}
-                className="border-2 border-primary/20 shadow-soft hover:shadow-elegant hover-lift transition-all overflow-hidden animate-expand-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-0">
-                  {/* Photo section */}
-                  <div className="relative h-52 overflow-hidden">
-                    <img 
-                      src={story.photo} 
-                      alt={story.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className={`absolute top-3 right-3 p-2 rounded-lg backdrop-blur-sm ${
-                      story.color === 'primary' ? 'bg-primary/20' : 'bg-secondary/20'
-                    }`}>
-                      <story.icon className={`h-5 w-5 ${
-                        story.color === 'primary' ? 'text-primary' : 'text-secondary'
-                      }`} />
-                    </div>
-                  </div>
-                  
-                  {/* Text content */}
-                  <div className="p-4 space-y-1.5">
-                    <h3 className="text-xl font-bold font-display text-foreground">
-                      {story.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {story.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Quick facts - Horizontal scroll style */}
+          {/* Quick facts */}
           <div className="mb-14 animate-soft-fade-in">
             <h3 className="text-2xl font-bold font-display text-foreground mb-8">
               Quick Facts About Me
