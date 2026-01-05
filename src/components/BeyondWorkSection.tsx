@@ -12,10 +12,10 @@ import {
 
 const BeyondWorkSection = () => {
   const hobbies = [
-    { icon: Dumbbell, title: "Working Out", description: "Placeholder text for working out hobby" },
-    { icon: BookOpen, title: "Reading", description: "Placeholder text for reading hobby" },
-    { icon: CookingPot, title: "Cooking", description: "Placeholder text for cooking hobby" },
-    { icon: Music2, title: "Dancing", description: "Placeholder text for dancing hobby" }
+    { icon: Dumbbell, title: "Working Out"},
+    { icon: BookOpen, title: "Reading"},
+    { icon: CookingPot, title: "Cooking"},
+    { icon: Music2, title: "Dancing"}
   ];
 
   const quickFacts = [
