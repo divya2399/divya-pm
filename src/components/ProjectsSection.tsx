@@ -63,28 +63,32 @@ const ProjectsSection = () => {
               >
                 {/* Project Preview - Alternates sides */}
                 <div className={`${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'} relative group`}>
-                  <div className="relative aspect-video rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift">
+                  <a 
+                    href={project.embedUrl.replace('/view?embed', '/view')} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block relative aspect-video rounded-3xl overflow-hidden shadow-soft hover:shadow-elegant transition-all duration-500 hover-lift cursor-pointer"
+                  >
                     {/* Soft corner accent */}
                     <div className={`absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-32 h-32 ${
                       index % 2 === 0 ? 'bg-primary/20' : 'bg-secondary/20'
-                    } blur-3xl`} />
+                    } blur-3xl z-10 pointer-events-none`} />
+                    
+                    {/* Thumbnail image instead of iframe */}
+                    <img 
+                      src={`https://via.placeholder.com/800x450/f8f5f0/1a1a2e?text=${encodeURIComponent(project.title)}`}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                     
                     {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 z-20">
                       <div className="flex items-center gap-2 text-primary font-semibold">
                         <ExternalLink className="h-4 w-4" />
                         <span className="text-sm">View Project</span>
                       </div>
                     </div>
-                    
-                    <iframe 
-                      loading="lazy" 
-                      className="w-full h-full"
-                      src={project.embedUrl}
-                      allowFullScreen 
-                      allow="fullscreen"
-                    />
-                  </div>
+                  </a>
                 </div>
 
                 {/* Project Details - Alternates sides */}
