@@ -54,17 +54,17 @@ const BeyondWorkSection = () => {
               Hobbies & Interests
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-3xl mx-auto">
               {hobbies.map((hobby, index) => (
                 <div
                   key={index}
                   className="flex items-center gap-4 group animate-expand-in border-l-2 border-primary/30 pl-4 hover:border-primary transition-colors"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <hobby.icon className="h-5 w-5 text-primary shrink-0 group-hover:scale-110 transition-transform" />
+                  <hobby.icon className="h-6 w-6 text-primary shrink-0 group-hover:scale-110 transition-transform" />
                   <div className="flex flex-col">
-                    <h4 className="font-semibold text-foreground text-sm">{hobby.title}</h4>
-                    <p className="text-xs text-muted-foreground">{hobby.description}</p>
+                    <h4 className="font-semibold text-foreground text-base">{hobby.title}</h4>
+                    <p className="text-sm text-muted-foreground">{hobby.description}</p>
                   </div>
                 </div>
               ))}
