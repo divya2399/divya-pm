@@ -78,12 +78,12 @@ const ProjectsSection = () => {
                     />
                     
                     {/* View Project button overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-6 flex justify-center z-20">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-center z-20">
                       <a
                         href={project.embedUrl.replace('/view?embed', '/view')}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105"
+                        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-lg"
                       >
                         <ExternalLink className="h-4 w-4" />
                         View Project
